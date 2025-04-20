@@ -1,4 +1,4 @@
 #!/bin/bash
 cat /etc/bandit_pass/bandit24 > /tmp/tmp.XG9wFnqUjt/password
 
-#bandits 24->25
+#bandits 23->24
