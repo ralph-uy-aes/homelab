@@ -15,6 +15,7 @@
 3. `ls`: Lists all directories
 4. `cd`: Change directory
 5. `cat`: Output contents of a file (concatenate)
+	- To get a scrollable `cat` just use `less`
 6. `pwd`: Output your current directory
 
 #### Intermediate Commands
