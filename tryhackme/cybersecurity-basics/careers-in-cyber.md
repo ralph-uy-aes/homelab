@@ -69,3 +69,6 @@
 - Responsibilities:
 	- Emulate a **real attacker**
 	- Instead of simply testing tools, you **test the entire security** of the company
+
+#### Summary
+- I learned about the different careers involved in cybersecurity. Highlighted the teamwork aspect for me. I took the quiz and got Security Analyst for my match. I do personally find pen-testing and red-teaming more interesting.

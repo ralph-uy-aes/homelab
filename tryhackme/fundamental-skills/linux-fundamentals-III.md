@@ -84,3 +84,6 @@
 - These show logs for different services and applications
 - Great for monitoring system and application health
 - Helpful for monitoring intrusions and diagnosing performance issues
+
+#### Summary
+- I learned about the use of text editors, linux utilities, UNIX processes, automation via cron, package management, and logs. These features are fundamental for the cybersecurity side of things.

@@ -148,3 +148,6 @@
 - Vulnerability: **susceptibility to attack**, a vulnerability is a weakness
 - Threat: a **potential danger** associated with this weakness or vulnerability
 - Risk: **likelihood of a threat actor** exploiting a vulnerability
+
+#### Summary
+- I learned about the CIA and DAD triads, how they are implemented via different security models such as Bell-LaPadula, Biba, and Clark-Wilson models. I also learned more about MLS and ISO/EIC 19249 standards. Finally, I learned about trust, zero-trust. and threat vs risk.

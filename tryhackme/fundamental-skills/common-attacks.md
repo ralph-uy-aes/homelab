@@ -203,3 +203,6 @@
 - Antivirus updates are pretty frequent because they keep known exploit signatures
     - When new malware is discovered, antivirus vendors generate signatures to identify the malware
     - Updated antivirus catch these signatures and prevent malware
+
+#### Summary
+- I learned a ton from this room. Everything from common attack vectors to safety protocols was discussed. I had background knowledge on all of these topics, but I got a more in-depth look at things like TLS, password security, how VPNs work, Backup rules, antivirus signatures, malware, etc... I also learned about real cases of these attacks and also examples of real products like password managers and VPNs.

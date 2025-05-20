@@ -108,3 +108,5 @@
 	- Delete backups and shadow copies (Microsoft Shadow Copies create backup copies and snapshots)
 	- Overwrite and corrupt data
 
+#### Summary
+- I learned about the different phases that compose the cyber kill chain. I learned about different reconnaissance methods, where you could get cyber weapons, how you can transmit those weapons and exploit systems with them, how to back door into a system and have persistent access, and how you can escalate your privileges within a system.

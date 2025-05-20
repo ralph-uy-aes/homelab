@@ -52,3 +52,6 @@
 - Ping is a fundamental tool that uses Internet Control Message Protocol or ICMP packets to determine connection performance between devices
 - The time taken for ICMP packets is measured by ping: first, send a packet and start a timer; wait for an echo or a response packet; stop timer once echo is received
 - The `ping` command is often native to operating systems and is readily usable
+
+#### Summary
+- I learned the specifics of IP and MAC Addresses. Something that stood out to me was MAC address spoofing which is kind of hard to accept as reality. A friend once told me "the cyber world is a lawless place" and now I can definitely see why. Spoofing is almost like stealing another person's biometric features which is kinda scary. I also learned about the capacities of three different protocols: IPv4, IPv6, and MAC.

@@ -176,3 +176,7 @@
     - Now, I simply connect to the FTP server and use mike's credentials
         - `ftp <IP>`
     - I `ls` and find the flag and use `more` to view it
+
+#### Summary 
+- Enumerating and exploiting Telnet involved a lot of connecting and setting up.  The main takeaway from enumeration is that sometimes services are hidden by using non-standard ports. A lot of setting up was done for exploitation: connection to a telnet server, tcpdump listener, netcat listener, and a reverse shell payload. Basically: connect to telnet, ping to check connection, create a listener, generate payload, push and run payload, and then execute commands remotely.
+- This was definitely my favorite room so far. I learned a ton of new practical methods as well as three new network protocols that I can exploit confidently. I learned enumeration via port scanning using nmap as well as SMB enumeration using enum4linux. All in all, I learned the following tools: nmap, enum4linux, smbclient, telnet, tcpdump, msfvenom, netcat or nc, and hydra. Great room overall.

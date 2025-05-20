@@ -65,3 +65,6 @@
 2. Scapy - Send, sniff, dissect, and forge network packets
 3. Pwntools - CTF and exploit development library
 - To get these installed on your machine use `pip install <library>`
+
+#### Summary
+- This served to be a nice recap session for the Python experience I've already had. While I didn't learn anything new, the last time I used Python was almost a year ago now, so learning about basic syntax for scripting was really helpful

@@ -99,3 +99,6 @@
     - Usually, IP addresses have a time limit and must be renewed with the DHCP server
 - But I don't have a DHCP server at home? How does that work?
     - The router is a multi-tasker: routing and DHCP services at the same time
+
+#### Summary
+- I learned about how LAN can be used to divvy up the network as well as the ARP and DHCP protocols. I also learned about what IP address octets mean and some important IP addresses to know. I learned about topologies of LANs and what exploitable flaws they have. Finally, I learned about subnetting, switches, and routers.

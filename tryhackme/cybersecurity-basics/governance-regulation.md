@@ -192,3 +192,6 @@
 		- **Processing Integrity**: Ensure system processing occurs in a timely manner
 		- **Confidentiality**: Ensure confidential information is protected from unauthorized access
 		- **Privacy**: Ensure that personal information is protected from unauthorized access
+
+#### Summary
+- I learned about a lot of different frameworks that involve governance, regulation, and compliance of a company in information security. The main frameworks discussed were the GRC, NIST 800-53, ISO/IEC 27001. And the main laws discussed were: GDPR, HIPAA, PCI-DSS, GLBA. Audits, development of policies, etc.. were also discussed. Overall, seems like this chapter focuses heavily on the management and legal side of things.

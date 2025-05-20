@@ -70,3 +70,6 @@
     - As soon as the system is restarted, `/tmp` is wiped
     - Kind of like a cache
     - Any user can write to this directory by default, very helpful for pen-testing and scripting
+
+#### Summary
+- I learned about SSH, flags and switches, filesystem commands, common directories, permissions and access control. Overall, very fundamental and was full of things that new Linux users should be familiar with.

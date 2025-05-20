@@ -30,3 +30,6 @@
 3. `>`: Redirector, takes output from one command and direct it elsewhere
 	- `echo <content> > <file>`: Puts the content into whatever file is specified (overwrites)
 4. `>>`: The same as `>`, but appends the output instead of overwriting
+
+#### Summary
+- I learned about the UNIX family of operating systems, the pros and cons of using Linux, and various fundamental commands within all UNIX systems. Basic commands like cat, echo, ls and more intermediate commands like find and grep were discussed. Finally, shell operators were also discussed.
