@@ -114,10 +114,65 @@
             - Options:
             1. `-p`: payload
             2. `lhost`: the IP of the local machine
-            3. `lport`: The port to listen on
+            3. `lport`: the port to listen on
             4. `R`: export in a raw format
     - Finally, set up a netcat listener in the local machine    
         - Syntax: `nc -lvnp <Port>`
         - Copy the generated payload and `.RUN` it on the Telnet server
         - Now, we have a shell on the target machine and we can run commands
         - Run `ls` and find "flags.txt" `cat flags.txt` and that's the flag
+
+#### File Transfer Protocol or FTP
+- A protocol used to remotely transfer files over a network
+- Uses a client-server model
+    - Client initiates a connection with the server
+    - Server validates login credentials and opens the session
+- Relays commands and data very efficiently
+- Operates using two channels:
+1. Command and Control (C2) Channel - command transmission
+2. Data Channel - data transfer
+- Active FTP Connection - Client opens a port and listens, server is required to actively connect to it
+- Passive FTP Connection - Server opens a port and listens passively, client connects to it
+- Separation of command and data into separate channels allows you to send commands without having to wait for data transfer to finish, thereby being very efficient
+- The standard port is 21 for command and 20 for data
+
+#### Enumerating FTP
+- Exploit an anonymous FTP login to see what files we can access
+- See if we can pop a shell on the system with these files
+- Common in CTF challenges and mimics real-life careless FTP server implementation
+- Again, our tool to scan for all ports is `nmap <IP> -p- -vv -T5`, so start with that
+    - We find that port 21 is open which is the standard port for FTP
+- Now, we want to aggressively scour that port using the `-A` option
+    - We find out that the variant or version of FTP is vsftpd
+    - Let's login to the FTP server of the IP using anonymous for our username
+- Great, now we're in the FTP server and we can do `ls` to check for files in our current directory
+    - We find `PUBLIC_NOTICE.txt`
+    - Open that with `more`
+    - The notice seems to be written by Mike, this could be a username!
+- We have gathered FTP version, open ports, and a possible username
+
+#### Exploiting FTP
+- Just like Telnet, FTP's command and data channels are unencrypted
+- MitM attacks can easily intercept and steal important commands and data
+- We can exploit weak or default password configurations in FTP servers
+- Method Breakdown
+    - We have
+    1. Unsecure ports (20/21)
+    2. Possible username
+    3. FTP Version
+    - We can use
+    1. Hydra
+        - Hydra is a very fast online password cracking tool which can perform rapid dictionary brute-force attacks
+        - Works for more than 50 protocols (SSH, FTP, HTTP/S, SMB, etc...)
+        - Syntax: `hydra -t <# of parallel connections> -l <username> -P <dictionary path> -vV <IP> <protocol>`
+    2. FTP
+        - `ftp <IP>`
+- Experience
+    - After enumerating, I learned what the username of the target was, so all I need now is the password.
+        - In order to get the password, I used Hydra: `hydra -t 4 -l mike -P /usr/share/wordlists/rockyou.txt -vV <IP> ftp`
+        - This didn't work initially as rockyou.txt was actually in a `.gzip` file
+        - I unzipped it with `gzip -d /usr/share/wordlists/rockyou.txt.gz`, but you can also use `gunzip`
+        - Hydra ran for a bit and landed on the matching password "password"
+    - Now, I simply connect to the FTP server and use mike's credentials
+        - `ftp <IP>`
+    - I `ls` and find the flag and use `more` to view it
