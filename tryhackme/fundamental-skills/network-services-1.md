@@ -78,7 +78,7 @@
 - `-p-` is key here because sometimes, non-standard ports are used as a way to hide services
 - Now that I've determined an exact port, I can aggressively scan the port with a new option: `-A`
     - `-A` enables OS detection, version detection, script scanning, and traceroute
-    - I use the command `nmap <IP> -p 8012 -A -vv
+    - I use the command `nmap <IP> -p 8012 -A -vv`
     - I notice something of interest: "SKIDY'S BACKDOOR"
 - Finally, I have enumerated three new things:
     - An open port: 8012
