@@ -40,4 +40,4 @@
 - I injected a malicious link into a function that takes user input as "name" and appends it onto a `<tag>` element by typing `<a href="<Link>">name</a>` into the "name" field. This creates a link to the malicious site on the website itself
 
 #### Summary
-- Websites make a lot of sense to me as I have done a software engineering class. It is interesting to see how easily web devs overlook security and leak important information over source code as well as create sloppy user input filtering which allow malicious parties to create HTML and JS injections
+- Websites make a lot of sense to me as I have done a software engineering class. It is interesting to see how easily web devs overlook security and leak important information over source code as well as create sloppy user input filtering which allow malicious parties to create HTML and JS injections.
