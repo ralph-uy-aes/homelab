@@ -36,3 +36,11 @@
 
 - Why it's useful: The ISC is valuable for cybersecurity professionals because it offers timely and detailed information on current threats and vulnerabilities. By staying updated with the ISC's daily reports, professionals can enhance their situational awareness and improve their organization's security posture. The resource is especially beneficial for those involved in incident response, threat hunting, and network defense.
 
+#### OWASP
+- Title: Open Worldwide Application Security Project
+
+- URL: owasp.org/ 
+
+- Abstract: As the world's largest non-profit organization that is concerned with software security, OWASP supports the creation of impactful projects and providing resources meant to educate the masses in order to make better software that is more secure. Their core values are open, being transparent with their development, innovative, encouraging new trains of thoughts, global, allowing participants all over, and integrity, supporting and respecting one another in the OWASP community.
+
+- Why it is useful for professionals: OWASP provides an abundance of resources for cybersecurity professionals to create, promote, and maintain secure and robust code. Their resources create the standard for programming and security practices in the industry. Through regularly consulting these resources, programmers and security consultants' security posture will be aligned with what's current in the industry. 
