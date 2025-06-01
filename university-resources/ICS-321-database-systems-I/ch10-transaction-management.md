@@ -124,4 +124,62 @@ non-repeatable, and phantom reads
 ## 10.5 Transactions with SQL
 
 #### Isolation Levels
-- 
+- Transaction statements are standardized in SQL and implemented in most relational databases
+- But, concurrency and recovery systems vary a lot, so many nonstandard extensions exist
+- `SET TRANSACTION` statements set the isolation level for subsequent transactions
+    - Ex.
+    ```
+    SET [ GLOBAL | SESSION ] TRANSACTION 
+    ISOLATION LEVEL [ SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED ];
+    ```
+    - Keyword following `ISOLATION LEVEL` balances isolation of concurrent transactions against performance
+        - `SERIALIZABLE` provides complete isolation with longer    transaction duration
+        - `READ UNCOMMITTED` allows conflicts between concurrent transactions with shorter duration
+    - The keyword after `SET` defines the scope of the isolation level
+        - `SESSION` sets the isolation level for all transactions in the current session; a session is a series of SQL statements submitted to a MySQL server, beginning when a user or program connects to the server and ending when the user or program disconnects
+        - `GLOBAL` sets the isolation level for all transactions for all subsequent sessions; existing sessions are not affected and it `GLOBAL` can only be used by a database admin with required privileges
+- Sequentially, `GLOBAL` is basically default level, then whenever you put a new `SET TRANSACTION` without any keywords after `SET`, it follows that only for the next transaction, and then when you put `SESSION` it only overrides `GLOBAL` and follows that for all following transactions until a new `SET TRANSACTION`
+
+#### Transaction Boundaries
+- First or last statements of a transaction
+- One of three statements
+    - `START TRANSACTION` starts a new transaction
+    - `COMMIT` commits the current transaction
+    - `ROLLBACK` rolls back the current transaction
+- The autocommit system variable does what it says
+    - You can set it `ON` or `OFF` with `SET autocommit = [ OFF | ON ];`
+    - On by default
+- `COMMIT` and `ROLLBACK` can optionally have
+    - `AND CHAIN` overrides autocommit and starts a new transaction
+    - `RELEASE` ends the current section and disconnects from the server
+- `BEGIN` is identical to `START TRANSACTION`, but can be easily confused with `BEGIN-END`, not recommended
+
+#### Savepoint
+- A point in a transaction where partial transaction results are saved temporarily
+- Prevent redoing work in lengthy transactions
+- Managed with three statements using a savepoint name for an identifier:
+    - `SAVEPOINT` saves internal transaction data and associates the data with the identifier
+    - `RELEASE SAVEPOINT` discards the identifier and saved data
+    - `ROLLBACK TO` resets transaction data to the savepoint values, restarts processing at the savepoint, and releases all subsequent savepoints
+        - `ROLLBACK` is different as it reverses all changes vs `ROLLBACK TO` which erases everything up to a savepoint
+- Ex.
+```
+SAVEPOINT identifier;
+
+ROLLBACK TO identifier;
+
+RELEASE SAVEPOINT identifier;
+```
+
+#### Checkpoints
+- A dirty block is a database block that has been updated in main memory, but not yet saved on storage media
+    - A checkpoint saves all dirty blocks to enable recovery from system failure
+        - Suspends database processing
+        - Writes a checkpoint record in the log
+        - Writes all unsaved log records to the log file
+        - Writes all dirty blocks to storage media
+- A fuzzy checkpoint resumes processing while saving dirty blocks
+- Log records and dirty blocks can be explicitly flushed with `FLUSH` statements
+    - `FLUSH TABLES` writes all dirty blocks to storage media
+    - `FLUSH LOGS` saves all log records to storage media
+- Some databases have manual checkpoints using `CHECKPOINT` keyword
