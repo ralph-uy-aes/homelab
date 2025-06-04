@@ -53,3 +53,12 @@
 - Abstract: Shodan is essentially a search engine for any device connected to the internet. Everything from open cameras, routers, servers, mobile devices, etc... can be looked up. This tool is particularly useful for reconnaissance which is first stage of the cyber kill chain. According to Wikipedia, it gathers data from HTTP/HTTPS, FTP, SSH, Telnet, SNMP, IMAP, SMTP, SIP, and RTSP. RTSP is port 554 which is used for camera devices.
 
 - Why it is useful for professionals: Shodan can streamline the process of reconnaissance for many cybersecurity professionals. I actually remember using it back when I was around 13 years old to search for cameras from all over the world. I was able to login to these IP cameras using default credentials like admin/admin or admin/password and I saw a large variety of things like inside people's houses, secure facilities, street cameras, etc... Nowadays, these IP cameras aren't as unsecure so there was barely any left on Shodan last I checked. I believe that this experience stresses the need for everyone to avoid using default credentials. Shodan streamlined the process of finding IP cameras for me which allowed me to do some reconnaissance, albeit for no meaningful purpose whatsoever.
+
+#### Awesome Cyber Security University
+Title: Awesome Cyber Security University
+
+URL: https://github.com/brootware/awesome-cyber-security-university
+
+Abstract: Awesome Cyber Security University is a GitHub repo containing a curated list of free educational resources that focus on learning through multiple practice stages. It has six levels to clear, which each increase in difficulty as someone progresses through them. They also have badges that allow users to certify that they completed these challenges. CTF challenges are also prevalent in this repo, and they are a gamified version of cybersecurity that challenges users with finding a specific piece of information, called a flag. The goal of these challenges is to find this flag that is being protected. 
+
+Why it's useful: This is useful because it can benefit not just cybersecurity professionals, but also beginners, as the six stages allow for people of any experience to attempt challenges that they feel comfortable doing. For professionals, the "Extremely Hard Rooms to do" section can give them many difficult exercises to brush up on, and the tools covered in the course are very varied, even offering things like Ghidra and Assembly. Overall, this is a useful repository for free cybersecurity practice at any level of skill. 
