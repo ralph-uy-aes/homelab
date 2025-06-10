@@ -73,3 +73,12 @@ Cisco Talos provides up-to-date threat intelligence, including malware alerts, v
 
 - Why it's useful:
 Talos helps cybersecurity professionals stay ahead of active threats. Their reports provide useful technical info and insights into how attackers operate, which can improve detection, response, and prevention strategies.
+
+#### Eric Zimmerman Tools
+- Title: EZ Tools
+
+- URL: https://ericzimmerman.github.io/#!index.md
+
+- Abstract: Eric Zimmerman's (EZ) Tools are tools were written by Eric Zimmerman who is a security researcher. These tools help for tasks requiring digital forensics, but they specialize in Windows OS (still works on Linux and other OS). From SANS Institute: "These open source digital forensics tools can be used in a wide variety of investigations including cross validation of tools, providing insight into technical details not exposed by other tools, and more. Over the years, Eric has written and continually improve over a dozen digital forensics tools that investigators all over the world use and rely upon daily."
+
+- Why it is useful for professionals: Professional security analysts specializing in post-incident response and recovery can use digital forensics tools to investigate an attack. Eric Zimmerman has compiled and built tools that not only work great, but also come for free as they're open-source. By staying free, costs for investigation are minimized.
