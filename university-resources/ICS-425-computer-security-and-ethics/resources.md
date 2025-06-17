@@ -82,3 +82,40 @@ Talos helps cybersecurity professionals stay ahead of active threats. Their repo
 - Abstract: Eric Zimmerman's (EZ) Tools are tools were written by Eric Zimmerman who is a security researcher. These tools help for tasks requiring digital forensics, but they specialize in Windows OS (still works on Linux and other OS). From SANS Institute: "These open source digital forensics tools can be used in a wide variety of investigations including cross validation of tools, providing insight into technical details not exposed by other tools, and more. Over the years, Eric has written and continually improve over a dozen digital forensics tools that investigators all over the world use and rely upon daily."
 
 - Why it is useful for professionals: Professional security analysts specializing in post-incident response and recovery can use digital forensics tools to investigate an attack. Eric Zimmerman has compiled and built tools that not only work great, but also come for free as they're open-source. By staying free, costs for investigation are minimized.
+
+#### MISP Threat Sharing
+- Title: MISP Threat Sharing 
+
+- URL: MISP Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing
+
+- Abstract: A platform dedicated to sharing, storing and collecting various threat information, ranging from vulnerability info in a site, system, or hardware, down to counter-terrorism information.
+
+- Why it is useful for professionals: MISP is useful in the sharing of information on various malwares through means of malware analysis and observing indicators of compromise, which ultimately comes down to not only detecting attacks, but also preventing future ones. The site is not only for those of technical standing, but also for those who are non-technical through tools such as their Automatic correlation engine, showing the link between attributes and indications of malwares or other threats. The storing of data in MISP is done neatly, in an organized way, allowing for creating meaningful context given a certain security situation. This, along with the robust system of data sharing through MISP, create a centralized platform for threat intelligence.
+
+#### TryHackMe
+- Title: TryHackMe
+
+- URL: https://tryhackme.com
+
+- Abstract: TryHackMe is a cybersecurity training platform that has both free and paid versions. It teaches hacking, penetration testing, and cybersecurity skills. The website sets users up with virtual machines for them to use and hack into, and teaches multiple ways to hack into vulnerable software. It covers tools like nmap, metasploit, and wireshark. It also offers competitions against other players with a King of the Hill style security game, in which players attempt to hack into each other's machines and protect their own ones. 
+
+- Why it is useful for professionals: This website offers certification for professionals, so they could add it into their Resume to show that they have some hands-on experience with penetration testing. The website also has teaching tools, so if professionals want to teach their students or subordinates, they can use this website.
+
+#### DFIR Report
+- Title: The DFIR Report
+
+- URL: https://thedfirreport.com/
+
+- Abstract: The DFIR Report is a website that publishes real-world digital forensics and incident response (DFIR) case studies. Each report walks through how attackers gained access, what techniques they used (including TTPs from frameworks like MITRE ATT&CK), and how defenders responded to contain and remediate the incident. The site provides detailed technical breakdowns of the attacks, including malware analysis, command-and-control infrastructure, lateral movement, and exfiltration tactics.
+
+- Why it is useful for cybersecurity professionals:
+DFIR Report is extremely valuable because it shows real attack scenarios, not just theoretical ones. By reading these reports, cybersecurity professionals can better understand modern adversary behaviors, how initial access is gained, and how to improve detection and response strategies. It also helps with improving incident response playbooks and enhancing proactive threat hunting by learning from real-world intrusions.
+
+#### OSINT Framework
+- Title: OSINT Framework
+
+- URL: https://osintframework.com
+
+- Abstract: The OSINT Framework is a great tool for reconnaissance. OSINT means open-source intelligence and encompasses any information that can be obtained through publicly available sources. From the website: "OSINT framework focused on gathering information from free tools or resources. The intention is to help people find free OSINT resources. Some of the sites included might require registration or offer more data for $$$, but you should be able to get at least a portion of the available information for no cost."
+
+- Why it is useful for professionals: It is useful for both professionals and beginners who need to gather information for red-teaming or social engineering attacks. On top of providing an extensive list of tools and resources to gather a great variety of information, it is also free.
