@@ -119,3 +119,39 @@ DFIR Report is extremely valuable because it shows real attack scenarios, not ju
 - Abstract: The OSINT Framework is a great tool for reconnaissance. OSINT means open-source intelligence and encompasses any information that can be obtained through publicly available sources. From the website: "OSINT framework focused on gathering information from free tools or resources. The intention is to help people find free OSINT resources. Some of the sites included might require registration or offer more data for $$$, but you should be able to get at least a portion of the available information for no cost."
 
 - Why it is useful for professionals: It is useful for both professionals and beginners who need to gather information for red-teaming or social engineering attacks. On top of providing an extensive list of tools and resources to gather a great variety of information, it is also free.
+
+#### NIST - Security Content Automation Protocol (SCAP)
+- Title: NIST - Security Content Automation Protocol (SCAP)
+
+- URL: Security Content Automation Protocol | CSRC
+
+- Abstract: SCAP are a large set of specifications that set the standard for the configuration compliance while detecting any presences of vulnerabilities in a given software. Additionally, the standards of the SCAP are determined by those in the community, not necessarily meaning for all levels or even lack of cybersecurity knowledge, but to those in the cybersecurity industry. Because of this, SCAP can be used in many a range of many different use cases.
+
+- Why it is useful for professionals: The SCAP, since it is a standard for security automation, allows items like vulnerability scanners in a system to follow a standard format when doing its procedures, which create a more efficient flow of finding vulnerabilities in systems. Professionals can use the same SCAP content over many different tools, allowing for different assessments of the tool to be created. The SCAP is an enforcement of a configuration standard for professionals in the creation or assessment of a tool's cybersecurity posture.
+
+#### Hacker101
+- Title: Hacker101
+
+- URL: https://www.hacker101.com/
+
+- Abstract: This is a website that has free tools for people who want to learn websecurity. It offers video lessons, written guides, and a Capture the Flag platform. It covers a variety of topics topics like XSS, SQL injection, cryptography, mobile app security, and threat modeling. It also offers mobile hacking for Android and iOS devices. 
+
+- Why it is useful for professionals: For professionals, they can use this website for real-world training and have free access to high-quality video content relating to cybersecurity. Hacker101 is also being constantly updated with the most recent information regarding cybersecurity, so it will also keep professionals informed with emerging threats, vulnerabilities, and tools.
+
+#### Krebs on Security
+- Title: Krebs on Security
+
+- URL: https://krebsonsecurity.com/
+
+- Abstract: Krebs on Security is a blog run by cybersecurity journalist Brian Krebs that covers the latest cybersecurity news, data breaches, malware threats, and cyber crime investigations. The site provides detailed analyses, updates on new vulnerabilities, and practical advice on protecting information systems.
+
+- Why it’s useful: This resource is really helpful for cybersecurity professionals because it offers up-to-date information about real-world cyber threats and emerging trends. Staying informed through blogs like this helps professionals anticipate attacks, understand attacker methods, and apply the latest defensive strategies. It’s also written in a way that is accessible but still detailed enough for technical audiences.
+
+#### Virus Total
+- Title: Virus Total
+
+- URL: https://www.virustotal.com/
+
+- Abstract: VirusTotal is a free online tool that analyzes files, URLs, IP addresses, and domains using 70+ antivirus scanners and URL/domain blacklisting services. Users can upload content to check for malware and get a full breakdown of threat types and source engines that flagged it.
+
+- Why it’s useful: It’s one of the quickest ways to check if a file or link is malicious. Great for SOC analysts, threat hunters, or anyone handling phishing investigations.
