@@ -155,3 +155,12 @@ DFIR Report is extremely valuable because it shows real attack scenarios, not ju
 - Abstract: VirusTotal is a free online tool that analyzes files, URLs, IP addresses, and domains using 70+ antivirus scanners and URL/domain blacklisting services. Users can upload content to check for malware and get a full breakdown of threat types and source engines that flagged it.
 
 - Why it’s useful: It’s one of the quickest ways to check if a file or link is malicious. Great for SOC analysts, threat hunters, or anyone handling phishing investigations.
+
+#### SecLists
+- Title: SecLists Repository
+
+- URL: https://github.com/danielmiessler/SecLists
+
+- Abstract: From the repository : "SecLists is the security tester's companion. It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more. The goal is to enable a security tester to pull this repository onto a new testing box and have access to every type of list that may be needed."
+
+- Why It's Useful: SecLists is used more often than it is given credit for. I've probably used this repo in 2 out of 3 rooms that required dictionary attacks. It is useful for professionals because it has very useful and optimized dictionaries that anyone can use. Overall, I believe that it should be given more credit as it is used extensively in training and professional environments.
