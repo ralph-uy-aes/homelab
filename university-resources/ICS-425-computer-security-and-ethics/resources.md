@@ -164,3 +164,21 @@ DFIR Report is extremely valuable because it shows real attack scenarios, not ju
 - Abstract: From the repository : "SecLists is the security tester's companion. It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more. The goal is to enable a security tester to pull this repository onto a new testing box and have access to every type of list that may be needed."
 
 - Why It's Useful: SecLists is used more often than it is given credit for. I've probably used this repo in 2 out of 3 rooms that required dictionary attacks. It is useful for professionals because it has very useful and optimized dictionaries that anyone can use. Overall, I believe that it should be given more credit as it is used extensively in training and professional environments.
+
+#### CISA Current Cyber Threats
+- Title: Cybersecurity & Infrastructure Security Agency (CISA) - Current Cyber Threats
+
+- URL: https://www.cisa.gov/current-cyber-threats
+
+- Abstract: This website from CISA shares up-to-date information about new cyber threats and vulnerabilities. It includes alerts and warnings about different types of cyber attacks, malware, and hackers. It also gives tips and advice on how to protect networks and systems from these threats.
+
+- Why it’s useful: I think this site is really helpful for cybersecurity professionals because it gives current and reliable information straight from a trusted government source. By checking this site regularly, security teams can stay informed about the latest threats and be better prepared to defend against attacks. It’s a great resource to keep security practices strong and up to date.
+
+#### MalwareBazaar
+- Title: MalwareBazaar
+
+- URL: MalwareBazaar | Malware sample exchange
+
+- Abstract: As per website: "MalwareBazaar is a platform from abuse.ch and Spamhaus, dedicated to sharing malware samples with the infosec community, antivirus vendors, and threat intelligence providers. Upload malware samples and explore the database for valuable intelligence. Set alerts to track newly observed malware, use APIs to seamlessly push or pull signals, and automate bulk queries."
+
+- Why It's Useful: MalwareBazaar is a collective of a bunch of virus and malware samples that can be used by cybersecurity professionals in various ways to learn about them while also further securing their systems. Besides learning the mindset of a hacker, they can also look at the various programs they use to attack. One of ways to use the program and learn from it is to reverse engineer the program and deconstruct it to learn more of the virus' inner workings. Additionally, general analysis of these programs is value for cybersecurity teams. MalwareBazaar is integreated within many different partner websites and databases, so the samples of viruses and malware that they have to share is also growing.
