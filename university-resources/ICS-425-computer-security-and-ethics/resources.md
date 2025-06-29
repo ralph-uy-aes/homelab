@@ -182,3 +182,21 @@ DFIR Report is extremely valuable because it shows real attack scenarios, not ju
 - Abstract: As per website: "MalwareBazaar is a platform from abuse.ch and Spamhaus, dedicated to sharing malware samples with the infosec community, antivirus vendors, and threat intelligence providers. Upload malware samples and explore the database for valuable intelligence. Set alerts to track newly observed malware, use APIs to seamlessly push or pull signals, and automate bulk queries."
 
 - Why It's Useful: MalwareBazaar is a collective of a bunch of virus and malware samples that can be used by cybersecurity professionals in various ways to learn about them while also further securing their systems. Besides learning the mindset of a hacker, they can also look at the various programs they use to attack. One of ways to use the program and learn from it is to reverse engineer the program and deconstruct it to learn more of the virus' inner workings. Additionally, general analysis of these programs is value for cybersecurity teams. MalwareBazaar is integreated within many different partner websites and databases, so the samples of viruses and malware that they have to share is also growing.
+
+#### Cybersecurity Links and Resources
+- Title: Cybersecurity Links and Resources
+
+- URL: https://about.montreat.edu/cybersecurity/resources/
+
+- Abstract: This is a webpage hosted by Montreat College, which has many links to all types of things related to cybersecurity. These include upcoming events, external and internal resources, awareness, assessment, and action. They are consistently updated and provide information for all kinds of people, from elementary schoolers to experts. 
+
+- Why It's Useful: This website is useful for professionals because it provides users with a contacts list to reach out to if needed for ransomware. They also provide the link for Common Weakness Enumeration, which is a set of software weaknesses that has been catalogued, and a Cybersecurity Job listings link. 
+
+#### Cybersecurity Dive
+- Title: Cybersecurity Dive
+
+- URL: https://www.cybersecuritydive.com/
+
+- Abstract: Cybersecurity Dive is a news platform that delivers the latest in cybersecurity policy, incident response, data protection, and regulatory updates. It offers concise, high-level reporting tailored to industry professionals who need to stay informed on both technical trends and broader impacts across business, government, and infrastructure.
+
+- Why it is useful: Cybersecurity Dive is great for professionals who want to stay updated on both strategic and technical developments. It’s especially helpful for those in leadership or compliance roles, as it bridges the gap between CISO-level concerns and technical threat intelligence, making it a useful daily read in any cybersecurity toolkit.
