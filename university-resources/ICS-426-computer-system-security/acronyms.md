@@ -20,3 +20,18 @@
 - ISAC - Information Sharing and Analysis Center
 - IoA - Indicator of Attack
 - IoC - Indicator of Compromise
+- SOX - Surbanes-Oxley Act of 2002
+- FISMA - Federal Information Security Management Act
+- HIPAA - Health Insurance Portability and Accountability Act
+- PHI - Protected Health Information
+- FERPA - Family Educational Rights and Privacy Act
+- GLBA - Gramm-Leach-Bliley Act
+- GDPR - General Data Protection Regulation
+- PCI DSS - Payment Card Industry Data Security Standard
+- PII - Personally Identifiable Information
+- SPI - Sensitive Personal Information
+- CIO - Chief Information Officer
+- CSO - Chief Security Officer
+- CISO - Chief Information Security Officer
+- CCO - Chief Compliance Officer
+- CPO - Chief Privacy Officer
