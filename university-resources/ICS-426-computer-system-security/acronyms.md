@@ -1,0 +1,13 @@
+# Acronym or Word-List for Security+
+- CIA - Confidentiality, Integrity, Availability
+- PII - Personally Identifiable Information
+- CIS - Center for Internet Security
+- IEEE - Institute of Electrical and Electronics Engineers
+- IETF - Internet Engineering Task Force
+- ISO - International Organization for Standardization
+- ISOC - Internet Society
+- ITU - International Telecommunication Union
+- NIST - National Institute of Standards and Technology
+- NSA - National Security Agency
+- OWASP - Open Web Application Security Project
+- SPOF - Single Point of Failure

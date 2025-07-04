@@ -1,0 +1,50 @@
+# ICS 426 Computer Systems Security
+- This course is primarily based around the Security+ certification. The student manual which my notes will be based on is the CompTIA Security+ Certification Exam SY0-701 by 30BIRD Media and CompTIA.
+
+#### Table of Contents
+- Chapter 1: Security Fundamentals
+    - Module A: Security Concepts
+    - Module B: Understanding Threats
+    - Module C: Enterprise Security Strategy
+- Chapter 2: Risk Management
+    - Module A: Risk Management Programs
+    - Module B: Security Audits
+    - Module C: Conducting Security Assessments
+- Chapter 3: Organizational Security
+    - Module A: Social Engineering
+    - Module B: Security Policies
+    - Module C: User Roles and Training
+- Chapter 4: Cryptography
+    - Module A: Cryptography Concepts
+    - Module B: Public Key Infrastructure
+- Chapter 5: Network Connectivity
+    - Module A: Network Attacks
+    - Module B: Packet Flow
+- Chapter 6: Secure Network Configuration
+    - Module A: Network Security Components
+    - Module B: Secure Network Protocols
+    - Module C: Hardening Networks
+- Chapter 7: Authentication
+    - Module A: Authentication Factors
+    - Module B: Authentication Protocols
+- Chapter 8: Access Control
+    - Module A: Access Control Principles
+    - Module B: Account Management
+- Chapter 9: Enterprise Architecture
+    - Module A: System Vulnerabilities
+    - Module B: System Architecture
+- Chapter 10: Secure Assets
+    - Module A: Physical Security and Safety
+    - Module B: Securing Data
+- Chapter 11: Securing Specialized Systems
+    - Module A: Securing Hosts
+    - Module B: Mobile Security
+- Chapter 12: Secure Applications
+    - Module A: Application Attacks
+    - Module B: Securing Applications
+- Chapter 13: Disaster Planning and Recovery
+    - Module A: Secure Operations
+    - Module B: Resilience and Recovery
+- Chapter 14: Threat Detection and Response
+    - Module A: Security Monitoring
+    - Module B: Incident Response Procedures
