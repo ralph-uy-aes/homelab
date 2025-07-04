@@ -11,3 +11,12 @@
 - NSA - National Security Agency
 - OWASP - Open Web Application Security Project
 - SPOF - Single Point of Failure
+- APT - Advanced Persistent Threat
+- AI - Artificial Intelligence
+- CTI - Cyber Threat Intelligence
+- OSINT - Open-Source Intelligence
+- CSINT - Closed-Source Intelligence
+- CERT - Computer Emergency Response/Readiness Teams
+- ISAC - Information Sharing and Analysis Center
+- IoA - Indicator of Attack
+- IoC - Indicator of Compromise
