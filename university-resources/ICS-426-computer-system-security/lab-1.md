@@ -9,6 +9,7 @@
 #### ChatGPT
 - Based on the GPT-3.5 architecture
     - Trained on a massive amount of diverse text data from the Internet
+- Has competition from other AI models like Bard, DeepSeek, etc...
 
 #### Applications of ChatGPT in Cybersecurity
 - Detecting fraudulent emails and URLs
