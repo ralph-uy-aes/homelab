@@ -57,3 +57,10 @@
 - B2B - Business-To-Business
 - MSP - Managed Service Provider
 - PDCA - Deming Cycle
+- DLP - Data Loss Prevention
+- SCAP - Security Content Automation Protocol
+- CPE - Common Platform Enumeration
+- CCE - Common Configuration Enumeration
+- CVE - Common Vulnerabilities and Exposures
+- OVAL - Open Vulnerability and Assessment Language
+- XCCDF - eXtensible Configuration Checklist Description Format
