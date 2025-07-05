@@ -56,3 +56,4 @@
 - ROI - Return on Investment
 - B2B - Business-To-Business
 - MSP - Managed Service Provider
+- PDCA - Deming Cycle
