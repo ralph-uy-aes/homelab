@@ -64,3 +64,4 @@
 - CVE - Common Vulnerabilities and Exposures
 - OVAL - Open Vulnerability and Assessment Language
 - XCCDF - eXtensible Configuration Checklist Description Format
+- BEC - Business Email Compromise
