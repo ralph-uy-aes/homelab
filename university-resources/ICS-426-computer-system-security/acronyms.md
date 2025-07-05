@@ -35,3 +35,24 @@
 - CISO - Chief Information Security Officer
 - CCO - Chief Compliance Officer
 - CPO - Chief Privacy Officer
+- SWOT - Strengths, Weaknesses, Opportunities, Threats
+- RBS - Risk Breakdown Structure
+- PTA - Privacy Threshold Analysis
+- PIA - Privacy Impact Assessment
+- MTTF - Mean Time To Failure
+- MTTR - Mean Time To Repair
+- MTBF - Mean Time Between Failures
+- MTBSI - Mean Time Between Service Incidents
+- RTO - Recovery Time Objective
+- RPO - Recovery Point Objective
+- AV - Asset Value
+- EF - Exposure Factor
+- SLE - Single Loss Expectancy
+- ARO - Annual Rate of Occurrence
+- ALE - Annual Loss Expectancy
+- DREAD - Damage Potential, Reproducibility, Exploitability, Affected Users, and Discoverability
+- CVSS - Common Vulnerability Scoring System
+- TCO - Total Cost of Ownership
+- ROI - Return on Investment
+- B2B - Business-To-Business
+- MSP - Managed Service Provider
