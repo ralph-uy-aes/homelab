@@ -65,3 +65,21 @@
 - OVAL - Open Vulnerability and Assessment Language
 - XCCDF - eXtensible Configuration Checklist Description Format
 - BEC - Business Email Compromise
+- RMF - Risk Management Framework
+- CSF - Cybersecurity Framework
+- CIS CSC - CIS Critical Security Controls
+- CSA CCM - Cloud Security Alliance Cloud Controls Matrix
+- SSAE - Statement on Standards for Attestation Engagements
+- AUP - Acceptable Use Police
+- DPO - Data Protection Officer
+- SOP - Standard Operating Procedure
+- MOU - Memorandum of Understanding
+- MOA - Memorandum of Agreement
+- ISA - Interconnection Security Agreement
+- BPA - Business Partners Agreement
+- NDA - Non-Disclosure Agreement
+- SLA - Service-Level Agreement
+- MSA - Master Service Agreement
+- SOW - Statement of Work
+- RFQ - Request for Quotation
+- RFP - Request for Proposal

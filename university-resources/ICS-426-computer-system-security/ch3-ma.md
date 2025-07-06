@@ -1,4 +1,4 @@
-# Chapter 3: Risk Management - Module A: Social Engineering
+# Chapter 3: Organizational Security - Module A: Social Engineering
 
 #### About Social Engineering
 - The most bulletproof technical solutions can all be undone by unsecure human practices
