@@ -83,3 +83,5 @@
 - SOW - Statement of Work
 - RFQ - Request for Quotation
 - RFP - Request for Proposal
+- CBT - Computer-based Training
+- CTF - Capture the Flag
