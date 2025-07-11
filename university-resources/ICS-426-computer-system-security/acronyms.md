@@ -111,3 +111,10 @@
 - RIPEMD - RACE Integrity Primitives Evaluation Message Digest
 - CSIC - Computer Security and Industrial Cryptography
 - NTLM - NT LAN Manager
+- DN - Distinguished Name
+- CN - Common Name
+- SAN - Subject Alternative Name
+- EV - Extended Validation
+- CSR - Certificate Signing Request
+- CRL - Certificate Revocation List
+- OCSP - Online Certificate Status Protocol
