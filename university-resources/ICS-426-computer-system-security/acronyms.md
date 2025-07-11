@@ -85,3 +85,29 @@
 - RFP - Request for Proposal
 - CBT - Computer-based Training
 - CTF - Capture the Flag
+- PRNG - Pseudorandom Number Generator
+- CAPI - CryptoAPI
+- CSP - Cryptographic Service Provider
+- IV - Initialization Vector
+- AES - Advanced Encryption Standard
+- 3DES or TDES - Triple DES
+- DES - Data Encryption Standard
+- ECB - Electronic Code Book Mode
+- CBC - Cipher Block Chaining Mode
+- CFB - Cipher FeedBack Mode
+- OFB - Output FeedBack Mode
+- CTR - Counter Mode
+- GCM - Galois Counter Mode
+- OCB - Offset CodeBook Mode
+- RSA - Rivest-Shamir-Adleman
+- DSA - Digital Signature Algorithm
+- ECC - Elliptic Curve Cryptography
+- ECDSA - Elliptic Curve Digital Signature Algorithm
+- CRC - Cyclic Redundancy Check
+- HMAC - Keyed-Hash Message Authentication Code
+- MIC - Message Integrity Code
+- MD5 - Message Digest 5
+- SHA - Secure Hash Algorithm
+- RIPEMD - RACE Integrity Primitives Evaluation Message Digest
+- CSIC - Computer Security and Industrial Cryptography
+- NTLM - NT LAN Manager
