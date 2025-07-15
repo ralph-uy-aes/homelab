@@ -118,3 +118,19 @@
 - CSR - Certificate Signing Request
 - CRL - Certificate Revocation List
 - OCSP - Online Certificate Status Protocol
+- WAP - Wireless Access Points
+- AP - Access Point
+- MAC - Media Access Control
+- ARP - Address Resolution Protocol
+- DNS - Domain Name System
+- DoS - Denial-of-Service
+- DDoS - Distributed Denial-of-Service
+- OT - Operational Technology
+- ICS - Industrial Control Systems
+- IoT - Internet of Things
+- MitM - Man-in-the-Middle
+- PSK - Pre-shared Key
+- WEP - Wired Equivalent Privacy
+- WPS - Wi-Fi Protected Setup
+- NFC - Near-Field Communications
+- RFID - Radio Frequency Identification
