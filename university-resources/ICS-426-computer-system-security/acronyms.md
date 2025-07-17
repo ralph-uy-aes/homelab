@@ -134,3 +134,9 @@
 - WPS - Wi-Fi Protected Setup
 - NFC - Near-Field Communications
 - RFID - Radio Frequency Identification
+- ACL - Access Control Lists
+- STP - Spanning Tree Protocol
+- DPI - Deep Packet Inspection
+- NGFW - Next-generation Firewalls
+- UTM - Unified Threat Management
+- DMZ - Demilizatrized Zone
