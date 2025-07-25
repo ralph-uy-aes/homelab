@@ -140,3 +140,55 @@
 - NGFW - Next-generation Firewalls
 - UTM - Unified Threat Management
 - DMZ - Demilizatrized Zone
+- IDS - Intrusion Detection Systems
+- IPS - Intrusion Prevention Systems
+- SPI - Stateful Protocol Analysis
+- FIM - File Integrity Monitoring
+- SWG - Secure Web Gateway
+- SEG - Secure Email Gateway
+- SPF - Sender Policy Framework
+- DKIM - Domain Keys Identified Mail
+- DMARC - Domain-based Message Authentication, Reporting, and Conformance
+- SSL - Secure Sockets Layer
+- TLS - Transport Layer Security
+- SCP - Secure Copy Protocol
+- SFTP - SSH File Transfer Protocol
+- SAs - Security Associations
+- IKE - Internet Key Exchange
+- AH - Authentication Header
+- ESP - Encapsulating Security Payload
+- DHCP - Dynamic Host Configuration Protocol
+- DNS - Domain Name System
+- DNSSEC - DNS Security
+- DoT - DNS-over-TLS
+- DoH - DNS-over-HTTPS
+- NTP - Network Time Protocol
+- LDAP - Lightweight Directory Access Protocol
+- RDP - Remote Desktop Protocol
+- VNC - Virtual Network Computing
+- RFB - Remote Frame Buffer
+- SMB - Server Message Block
+- NFS - Network File System
+- SMTP - Simple Mail Transfer Protocol
+- POP3 - Post Office Protocol v3
+- IMAP - Internet Message Access Protocol
+- WEP - Wired Equivalent Privacy
+- WPA - Wi-Fi Protected Access
+- TKIP - Temporal Key Integrity Protocol
+- PSK - Pre-shared Key
+- SAE - Simultaneous Authentication of Equals
+- SAE-PK - SAE Public-Key
+- VPN - Virtual Private Networks
+- GRE - Generic Routing Encapsulation
+- PPTP - Point-to-Point Tunneling Protocol
+- SAW - Secure Admin Workstations
+- SDN - Software-defined Networking
+- RBI - Remote Browser Isolation
+- NPB - Network Packet Brokers
+- ZTA - Zero Trust Access
+- ZTNA - Zero Trust Network Access
+- SOC - Security Operations Center
+- PEP - Policy Enforcement Point
+- PE - Policy Engine
+- PA - Policy Administrator
+- PDP - Policy Decision Point
