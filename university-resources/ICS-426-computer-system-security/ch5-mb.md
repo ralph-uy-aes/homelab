@@ -95,4 +95,3 @@
     - Uses two firewalls:
         - Perimeter (Outer) firewall that protects screened subnet from the outside
         - Internal (Inner) firewall that protects intranet from the screened subnet
-    - 
