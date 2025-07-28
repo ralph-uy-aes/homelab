@@ -192,3 +192,26 @@
 - PE - Policy Engine
 - PA - Policy Administrator
 - PDP - Policy Decision Point
+- AAA - Authentication, Authorization, Accounting
+- MFA - Multifactor Authentication
+- OTP - One-time Password
+- HOTP - HMAC-based OTP
+- TOTP - Time-based OTP
+- PPP - Point-to-Point Protocol
+- PAP - Password Authentication Protocol
+- CHAP - Challenge-handshake Authentication Protocol
+- EAP - Extensible Authentication Protocol
+- RADIUS - Remote Authentication Dial-In User Service
+- NAS - Network Access Server
+- TACACS+ - Terminal Access Controller Access Control System
+- NAC - Network Access Control
+- EAPOL - EAP over LAN
+- KDC - Key Distribution Center
+- AS - Authentication Server
+- TGT - Ticket-granting Ticket
+- TGS - Ticket-granting Service
+- LDAP - Lightweight Directory Access Protocol
+- LDAPS - Secure LDAP
+- SAML - Security Assertion Markup Language
+- IdP - Identity Provider
+- SP - Service Provider
