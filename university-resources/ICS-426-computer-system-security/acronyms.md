@@ -215,3 +215,14 @@
 - SAML - Security Assertion Markup Language
 - IdP - Identity Provider
 - SP - Service Provider
+- DAC - Discretionary Access Control
+- MAC - Mandatory Access Control
+- RBAC - Role-based Access Control
+- RAC - Rule-based Access Control
+- ABAC - Attribute-based Access Control
+- ACL - Access Control List
+- SID - Security Identifier
+- ACE - Access Control Entry
+- DACL - Dynamic Access Control List
+- LBAC - Lattice-based access control
+- XACML - eXtensible Access Control Markup Language
