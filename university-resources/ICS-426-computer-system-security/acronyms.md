@@ -226,3 +226,10 @@
 - DACL - Dynamic Access Control List
 - LBAC - Lattice-based access control
 - XACML - eXtensible Access Control Markup Language
+- KBA - Knowledge-based Authentication
+- OOW - Out-of-Wallet
+- JIT - Just-in-Time
+- OU - Organizational Units
+- GPO - Group Policy Objects
+- RAT - Remote Access Trojan
+- C2 - Command and Control
