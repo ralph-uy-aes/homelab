@@ -233,3 +233,14 @@
 - GPO - Group Policy Objects
 - RAT - Remote Access Trojan
 - C2 - Command and Control
+- SOA - Service-Oriented Architecture
+- OT - Operational Technology
+- VM - Virtual Machines
+- VMM - Virtual Machine Monitor
+- IaC - Infrastructure as Code
+- DCS - Distributed Control System
+- SCADA - Supervisory Control And Data Acquisition
+- BAS - Building Automation Systems
+- SaaS - Software-as-a-Services
+- PaaS - Platform-as-a-Service
+- IaaS - Infrastructure-as-a-Service
