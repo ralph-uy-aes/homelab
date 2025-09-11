@@ -94,10 +94,10 @@
 - Application Layer
     - Defines what you want to send
     - Usually the layer that the user sees
+    - HTTP/S, SMTP, DNS, FTP
 - Presentation Layer
     - Changes the format into a readable format for whoever is receiving it and vice versa
     - Think security or encryption
-    - HTTP/S
 - Session Layer
     - Says "you sent me something last time saying you want to buy this, now you sent me your credit card information, I will connect the two"
     - Stores information that you send over time during a session
