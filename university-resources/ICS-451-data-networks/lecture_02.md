@@ -133,3 +133,11 @@
     - You need like 6 or 7 DNS servers in the world, all synchronously updated (when one is updated every other one must be)
     - This DNS gets turned into a distributed database
         - One server has bits and pieces of another server and so on
+
+#### Common Status Codes
+- 200 OK (success), 
+- 301/302 Moved Permanently/Temporarily (redirection), 
+- 404 Not Found (client-side resource missing), 
+- 403 Forbidden (client lacks permissions), 
+- 500 Internal Server Error (general server issue), 
+- 503 Service Unavailable (server is temporarily overloaded or down)
