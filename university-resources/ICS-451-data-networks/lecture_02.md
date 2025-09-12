@@ -67,12 +67,13 @@
 - No Response Body?
     - 404 Not found is not the body, there actually isn't any HTTP response body
         - However, some websites are smarter and give you a page that explicitly says "404 not found" with some graphics
-- Method/Resource
-    - Request/Header
-    - Request/Body
-- Status Code
-    - Response Header
-    - Response Body
+- Request
+    - Method name
+    - Header
+    - Body
+- Response
+    - Header
+    - Body
 
 #### Methods
 - The most popular method is probably "GET", the second is "POST", then "OPTIONS" and finally, "HEAD"
