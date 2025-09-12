@@ -1,3 +1,125 @@
 # Lecture 3
 
-#### 
+#### Read
+- Ch 1
+- Ch 2.1, 2.2, 2.4, 2.7
+
+#### HTTP Address
+- 3 Parts: Subdomain.Domain.Topleveldomain
+    - www.something.com
+- Sometimes people refer to the whole thing as the hostname
+- Originally, we only had about 12 TLDs
+    - You would get a certain domain depending on the nature of your server (universities get .edu, businesses .com, governments get .gov)
+    - Nowadays we have literally infinite domains (lol.cow, 4.ch)
+    - And most countries now has a domain each
+- In front of the hostname is "http://"
+- At the end of the hostname is either a "/" when left blank or a "/address"
+    - This is what the method applies to
+    - Hence, GET /address HTTP/1.1
+
+#### Methods
+- GET: Sender requests information
+- POST: Sender sends information
+    - Response body is synonymous to content
+      - When a site responds to a request, its body is the content itself
+      - Everyone ends up getting the same content or response body for when they're not logged in
+      - However, if they are logged in, the content may differ
+          - Logging in is POSTing information and is used by the server side to respond with different content
+  - Accept-Language header
+      - You can change the browser's language results by changing this header
+      - Usually, whenever you buy a laptop in a country the accept-language header is defined
+          - What happens is when you buy a laptop from Korea, the accept-language may be kr-kr or kr (Korean)
+      - However, some game companies and Disney go with location
+- HEAD: Same exact response as GET, but you don't get a response body
+    - Primarily used for troubleshooting (to save bandwidth)
+        - Admins want to ensure that the site is responsive and available all the time
+            - One way to do this is by sending a HEAD method to the site to check the headers and connection
+            - Verify the availability of the site
+        - Periodically send HEAD requests and expect status code 200, if not there's an issue and the admin checks it out
+            - Problem with using GET is there's too much bandwidth use, too costly, too expensive (imagine Youtube)
+        - Back then, the way to respond to users was to buy servers in a data center
+            - Now, we have cloud computing and you can just rent from Amazon
+        - Now, you might have a server, but how do you pipe out content?
+            - You need to get connected somehow to users
+            - You need more lines or mediums such as coaxial cables, ethernet, fiber-optics
+                - Amazon also pays for these services
+                - Cost depends on speed most of the time
+        - In order to test the server, make a test client and have it download a file to test if the server is running
+        - Imagine having to get all these just to test if your server works, this is impractical
+            - Super expensive, useless, complicated
+            - Instead just use the HEAD request and make it so that the server doesn't have to send the content or body, just the head
+- OPTIONS: Request for another web server that is listed within a web server
+    - Amazon.com might have a link to Google.com
+        - Browser made a request to Amazon.com, but Amazon.com also has a link to Google.com
+            - The browser making the request doesn't want to be responsible for these third-party links
+            - It sends an OPTIONS request to Google.com or the third-party link
+                - The browser asks if Amazon.com is trustworthy
+                - Google.com says yes, trustworthy
+        - The browser ends up making two requests
+            - OPTIONS to Google.com from Amazon.com
+            - GET to Amazon.com
+- There's also PUT, PATCH, DELETE, but are primarily used for managing files and folders in a website
+    - Instead of using FTP, just use HTTP methods to manage files
+    - Web servers usually block these methods to prevent strangers from manipulating their server files
+
+#### Status Codes
+- 200 OK (success), 
+- 206 Partial Content (incomplete body)
+    - Related to YouTube buffering
+    - "Content-length:n" shows you how big the file is, usually in bytes
+    - You can add a content header called "Range:n" in modheader to force partial content
+        - This gives you a range of the entire content based on length, appears as cut off of image with white for the rest of the bytes
+    - This can save you bandwidth and money
+    - Highly relevant to downloading games
+        - Imagine if your internet dies 19 minutes into the 20 minute download
+        - Steam or something remembers however much content you got, it request some range of the content that failed to download because of the internet outage and gets 206 or partial content from the game server
+    - Also relevant to YouTube
+        - You can watch the video almost immediately, you keep getting partial content
+        - Kind of like a treadmill or conveyor belt, instead of downloading the whole file before playing it, the browser requests range by range or byte by byte from the server
+- 301/302 Moved Permanently/Temporarily (redirection),
+    - Also read on 307/308
+    - Check for "Location: http://new.url.site/moved/to>" response header
+    - 301 vs 302, permanent means you will never get content at this hostname (site used to work, usually executive or brand changes) and temporary think something like Duo MFA (you're gonna go back to the real site in a bit calm down)
+    - The way you hit the top of the search is the one that has the most amount of clicks. Clicks don't include 302, but they do include 301. Theoretically, companies would want to get the highest search option, so buying DNS seems to be smart
+- 304 Not Modified (Indicates cache matches server file and hasn't been changed),
+    - Not technically a redirect, no reason to be in the 3xx series
+    - Decisions in networking are purely and often based on cost
+    - One of the most important status codes is the one that saves the most amount of money
+    - The server contains information, usually premium information that customers pay for through money or ads or some other way
+        - But, they are also spending money on bandwidth and servers
+    - This status code saves the most money, businesses love these. It is probably the bestest status code
+    - When you go to hawaii.edu two times in succession, you download 75 files two times, redundantly and the server pays for all that
+        - Save that image because there has been no modifications and the browser says I already have downloaded or cached that image
+    - This benefits the server by making it money
+    - This benefits the client by serving requests faster
+    - This is called caching or storing information locally, browser caches these files you get and gives it back when you get 304
+        - You have to clear your cache periodically in order to keep up to date and prevent slow downs from resource use
+        - You can't predict when images will change, the server-side decides when to update their own webserver
+        - The server decides how long to cache files, every time you make a GET request, as part of the response header, the server tells you an additional header that tells you for how long to cache something
+        - This header is called "cache-control: max-age=n", without appending a measure of time after n, it assumes seconds
+        - Sometimes, it says no-store or no-cache in cache-control, server tells browser not to save anything
+            - Usually applies to streaming, live sports, stocks, or anything that requires frequent live updates
+        - On the contrary, caches that last for a year or so are actually movies or jpgs
+            - Once a movie is released, that's it it doesn't change, likewise images don't change unless the server deliberately replaces it
+        - There are key macros on your browser to clear cache manually
+        - TTL - Time To Live, says this content is fresh for that duration, after which, it is considered stale, now it is replaceable
+            - LRU - Least Recently Used are deleted first, this content is deletable once they are TTL stale and LRU
+        - Once TTL is over, the browser needs to do another GET and freshens the stale cache file
+            - Tells the server, I want to GET this, but I already have this content... Is the one I have the same as the one I'm trying to GET?
+            - Server says no that's old, let me send you the new file
+            - Server says, yep that's the one I have, I won't send it to you to save bandwidth, I'll just send you 304
+                - Uses headers: etag and last-modified to determine if the content is the same, compares if matches
+- 401 Not Authorized (unauthenticated),
+    - Your identity is known, but you're unauthorized to access this resource
+- 404 Not Found (client-side resource missing),
+- 403 Forbidden (client lacks permissions),
+    - Permission denied for a client
+    - You're not allowed to access this content
+    - You're not logged in yet, so identity is unknown and access is forbidden by default
+- 500 Internal Server Error (general server issue),
+    - DESPITE SENDING A 5XX ERROR, HTTP SERVER IS STILL WORKING SIMPLY BY SENDING YOU A 5XX CODE
+    - If the server is totally down, HTTP server is broken and will not send you a response status code
+- 501 Not Implemented,
+- 502 Bad Gateway, 
+- 503 Service Unavailable (server is temporarily overloaded or down),
+- 504 Gateway Timeout,
