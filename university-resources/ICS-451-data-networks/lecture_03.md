@@ -104,11 +104,12 @@
         - There are key macros on your browser to clear cache manually
         - TTL - Time To Live, says this content is fresh for that duration, after which, it is considered stale, now it is replaceable
             - LRU - Least Recently Used are deleted first, this content is deletable once they are TTL stale and LRU
-        - Once TTL is over, the browser needs to do another GET and freshens the stale cache file
+        - ONCE TTL IS OVER, the browser needs to do another GET and freshens the stale cache file
             - Tells the server, I want to GET this, but I already have this content... Is the one I have the same as the one I'm trying to GET?
             - Server says no that's old, let me send you the new file
             - Server says, yep that's the one I have, I won't send it to you to save bandwidth, I'll just send you 304
                 - Uses headers: etag and last-modified to determine if the content is the same, compares if matches
+        - Browser does not send requests to the server until TTL is over, regardless of cache 
 - 401 Not Authorized (unauthenticated),
     - Your identity is known, but you're unauthorized to access this resource
 - 404 Not Found (client-side resource missing),
