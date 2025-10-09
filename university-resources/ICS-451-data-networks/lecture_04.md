@@ -69,8 +69,8 @@
     - What can you do with 20 bytes besides making about 2 floats? This protocol does it all in 20 bytes
 - A connection in TCP consists of 3 messages that get sent back and forth (Three-way Handshake):
     - SYN: "Hello are you there?"
-    - ACK: "Yes I'm here."
-    - SYN-ACK: "Good!"
+    - SYN-ACK: "Yes I'm here."
+    - ACK: "Good!"
 - This three way handshake establishes a TCP connection
     - SMTP also does this sort of thing with "Helo" back and forth (not a typo)
     - A TCP Body is essentially everything that comes from the Application Layer
