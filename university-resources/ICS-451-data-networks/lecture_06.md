@@ -143,4 +143,3 @@
 - Memorize TCP's state transition diagram for midterm
     - Each block represents a state
     - You need a transition or input to go from one state to the other
-    - 
