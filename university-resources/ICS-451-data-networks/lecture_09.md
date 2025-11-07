@@ -106,6 +106,11 @@
     - Wildcard Certificates
         - *.hawaii.edu
         - Applies to one domain, but also its subdomains
-
 - How many Certificates do you Need?
 	- One per TLS connection
+- What is the Name of the Certificate for a Server you're Going to?
+	- The URL of the server you're going to
+	- Hostname can have more than one certificate, saying URL is more accurate
+- What is the Common Name?
+	- Hostname
+	- If CDN and Origin server, it's the origin's host name
