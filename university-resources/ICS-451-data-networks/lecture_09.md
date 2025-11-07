@@ -106,3 +106,6 @@
     - Wildcard Certificates
         - *.hawaii.edu
         - Applies to one domain, but also its subdomains
+
+- How many Certificates do you Need?
+	- One per TLS connection
