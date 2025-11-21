@@ -35,7 +35,7 @@
     - 100% of the bandwidth all the time without collisions PERFECT!!!
     - Downside is you need monitoring or a manager
     - Token Bus or Token Ring
-    - SMA/CD
+    - CSMA/CD
 - Channel Partitioning
     - Gives small pieces of bandwidth by partitioning it
     - Not the most common protocol
