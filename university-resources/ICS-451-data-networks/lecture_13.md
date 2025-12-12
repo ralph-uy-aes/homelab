@@ -1,0 +1,104 @@
+# Lecture 13
+
+#### Error Detection
+- Which layers have error detection?
+- Layer 1 has no error checking because its just responsible for transferring the data
+- Datalink layer is responsible for access to the medium
+    - The Logic Link Control is responsible for error checking
+- Layer 3 has error checking too, but for basic detection like bad packets rather tha full correction
+- Layer 4 has TCP checksum, so there is error checking
+
+#### Media Access Control (Datalink Sublayer)
+- The Media Access Control sublayer refers to the topology and access mechanism
+    - Topology is the structure of the network
+        - Star: Single central point everything connects to
+        - Bus: Imagine a bus route with stops that only goes linearly, the most expensive of the three
+        - Ring: A circle, basically a closed bus topology loop
+    - Access Mechanisms
+        - Taking Turns or Token-Passing
+            - There's one token available for each network
+            - Whoever gets the token gets to transmit
+            - A token is just ones and zeroes (signal), not a physical token
+            - Types of wireless standards: 
+                - IEEE 802.4 Token Bus: No collisions, total efficiency, most expensive
+                - IEEE 802.5 Token Ring
+                - IEEE 802.3 CSMA/CD: Check if the medium is busy or not, if it is send, if not wait. Associated with bus topology
+        - Random Access
+            - ALOHA Protocol
+                - Prone to collisions because of random access
+                - Has Multiple Access (multiple devices can send data at the same time)
+                - 19% efficiency
+            - Slotted ALOHA
+                - Same thing, but you have time slots
+                - Has Multiple Access (multiple devices can send data at the same time)
+                - If you want to send something, you have to wait at a time scheduled for you
+                - Halved collision vulnerability
+                - Still has collisions when two senders want the same time slot
+            - CSMA
+                - Stands for carrier-sensing multiple access
+                - As you're sending the data, you send a beep or a tone during peaks or troughs of the signal (digital or analog)
+                    - Tone or noise + signal
+                - If a sender hears a tone, they don't send anything
+                - But there can be collisions if two senders start talking at the same time
+                - CSMA/CD
+                    - Adds Collision Detection
+                    - Detects when signals collide, stops transmission and then waits a random time before trying again
+
+#### Physical Layer
+- On the ethernet which is a Layer 2 protocol, there is a MAC Address
+- Every network card has a unique MAC
+- On the network layer, they use MAC instead of the IP address
+- Between Layer 2 and 3, there is a mapping between MAC and IP (ARP and Reverse ARP)
+- MAC is more efficient than the IP address
+    - Layer 3 says send this to this IP
+    - Layer 2 says what is its MAC?
+- Where information or Data from Layer 2 gets turned into signals (analog/digital)
+- Ethernet standard determines what signal voltage to send
+- Uses the 3 primary cables:
+    - Twisted Pair
+        - Two cables twisted around each other, found in landlines
+        - Two parallel wires near each other generates a magnetic field
+        - Must be twisted to avoid interference and neutralize the field
+    - Coaxial
+        - Center cable surrounded by plastic and insulation and then the outside cable
+        - Insulation prevents interference between inner and outer cable
+        - A lot more stable than the twisted pair, less prone to errors
+        - Really sturdy, need to drill to tap into it, used by phone companies
+    - Fiber Optic
+        - Instead of using electricity or voltage, fiber optic uses light
+        - Uses the principle of Total Internal Reflection
+        - Bounces light within the cable
+- Modulation
+    - Sending data over a specific, very clean frequency
+    - A non-clean frequency has a lot of interference and is just a jumble of frequencies
+    - The carrier wave is the electromagnetic wave that is going to carry your data
+    - Frequencies are owned by governments, these are very controlled, you can't just send whatever over any frequency
+        - Different frequencies are used for different things
+        - Some are reserved for very specific uses and you're not allowed to just use whatever frequency you want to
+    - You can pack more data in a high frequency signal
+        - However, it does not travel far or go through obstacles
+        - You need line of sight with a high frequency signal because it can't travel through things
+            - Even heavy rainwater can block signals
+        - Hence why there are towers, in order to go over obstacles
+            - Taller towers = more range, avoids obstacles
+            - Satellites are the ultimate towers because they are above a lot of obstacles
+            - Satellites move in order to not fall, they move away from the Earth to counteract gravity
+            - Low-orbit satellites need tracking stations to constantly track them and adjust in order to use them, uses a lot of technologies
+- Latency also matters, light travels at 3*10^8 m/s
+- Frequency Modulation (FM)
+    - Changing frequencies to represent 1s and 0s
+- Amplitude Modulation (FM)
+    - Changing amplitude to represent 1s and 0s
+- Phase Modulation (PM)
+    - Shifting the phase per time slot
+    - Wave Over the line = 1, Under the line = 0, or vice versa
+- How to transfer more data
+    - Shrinking the time slots can let you transfer larger data
+    - Having more levels than 0 and 1 could let you represent 2 bits, now you've doubled the amount you can send
+        - There's a limit to both of these
+    - You can also combine FM and AM and increase their levels too, now you have 16 levels or 4-bits, but if you had 32 levels, you can only send 5-bits or one more than if you had 16 levels
+        - Clearly there are diminishing returns, so there is a limit to this
+        - Called code division multiplexing or CDM
+            - Remember FDM and TDM?
+        - FM, AM, PM is in layer 1
+        - FDM, TDM is in layer 2 (channel partitioning protocols)
