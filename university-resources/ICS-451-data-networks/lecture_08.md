@@ -87,3 +87,18 @@
 - Client sends symmetric key encrypted using server's public key
 - Server receives encrypted symmetric key and decrypts using the private key
 - Now they both have the symmetric key
+
+#### TLS Exchange
+1. Client
+    - Client Hello
+2. Server
+    - Server Hello
+    - ServerKeyExchange
+    - Certificate
+    - Server End Hello
+3. Client
+    - ClientKeyExchange
+    - ChangeCipherSpec
+    - Finished
+4. Server
+    - Finished

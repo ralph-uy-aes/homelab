@@ -37,7 +37,7 @@
 - Bot attacks
     - Purposes could be for money or just for the sake of harming a business
     - Origin servers could have a firewall that only allow IP addresses from CDNs
-    - If a CDN is being attacked, all requests are redirected to a working CD
+    - If a CDN is being attacked, all requests are redirected to a working CDN
 - Speeding up communications
     - Reduce distance
     - Reduce amount of data being transferred (compression)

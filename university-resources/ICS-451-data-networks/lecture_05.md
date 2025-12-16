@@ -100,8 +100,8 @@
     - After all that work, the ISP server receives the domain that you wanted and sends you the domain you wanted from all the Root server, TLD server, and Auth server
     - The ISP server is also called a DNS resolver because it resolves the DNS for you
 - Iterative vs Recursive DNS Query
-    - The resolver is making an iterative query to the three servers because it just bounces back and forth between the three servers until it gets the full answer
-    - The DNS client is making a recursive query to the ISP server because it only wants the full answer, and sort of recurses with the ISP server
+    - When a resolver is involved, it is recursive because the original DNS client only has to interact with the resolver, instead of looking for the Root, TLD, and Auth by itself
+    - When the DNS client has to manually search for the Root, TLD, and Auth servers one by one, this is an iterative query
 - /etc/hosts file
     - You can actually make your own database locally and skip the whole DNS tango between Root, TLD, and Auth
     - When would you want to put a fake DNS entry in /etc/hosts, for example redirecting www.disney.com to something else

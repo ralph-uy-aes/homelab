@@ -47,7 +47,7 @@
 - Mail (Connection-less)
     - Highly structured indirect correspondence between two or more parties
     - Facilitated by a middleman (post office)
-    - You know they're receiving the message
+    - You don't know they're receiving the message
     - Does not require a connection (Connection-less)
         - DNS is a connection-less protocol
         - Instant: once sent, it goes
