@@ -18,7 +18,7 @@
 - Work closely with Layer 1 Physical
 - Just needs to be converted to signal by layer 1 which then sends it to the medium
 - Two types of signals: analog and digital
-- Almost everything starts of as analog and then digitized
+- Almost everything starts off as analog and then digitized
 
 #### Media Access Protocols
 - Ensures that everything on the medium is checked before anything is sent
@@ -35,7 +35,6 @@
     - 100% of the bandwidth all the time without collisions PERFECT!!!
     - Downside is you need monitoring or a manager
     - Token Bus or Token Ring
-    - CSMA/CD
 - Channel Partitioning
     - Gives small pieces of bandwidth by partitioning it
     - Not the most common protocol

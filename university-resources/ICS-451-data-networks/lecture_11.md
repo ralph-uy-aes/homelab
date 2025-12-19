@@ -29,7 +29,7 @@
     - The router is the only thing in your network that is public
     - Remember, routers have two IP addresses, one private and one public IP address
         - Usually the private IP is 192.168.1.1 or 192.168.1.0
-- NAT or Networked Address Translation is maps private IP addresses to public IP addresses to share a single public IP address across multiple devices on a local network
+- NAT or Networked Address Translation maps private IP addresses to public IP addresses to share a single public IP address across multiple devices on a local network
     - Whats the scenario when you have a server on a private network
     - Companies often have a private network to prevent anyone from accessing the real IP of their servers
     - Prevents people from simply using dig and finding their servers

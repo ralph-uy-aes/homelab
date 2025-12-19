@@ -53,7 +53,7 @@
 #### IPv4
 - Every device on the internet can have an IP address
 - It's made of X.X.X.X where X is anything between 0-255
-- 32 bits, so 2^32 IPs are available which is aroudn 4 billion IPs
+- 32 bits, so 2^32 IPs are available which is around 4 billion IPs
 - Class A addresses are everything from 0-127
 	- Reserved for large scale organizations
 	- 128 companies are class A addresses
@@ -74,11 +74,11 @@
 	- Class B are (128-191).(0-255).X.X, so N = /16
 	- Class C are (192-223).(0-255).(0-255).X, so N = /24 
 - But at some point we ran out of IP addresses
-	- You can't connect anythin to the internet
+	- You can't connect anything to the internet
 	- Fortunately, IPv6 was being created at this time
 		- Added more bits, instead of 32 bits from IPv4, you now have 128 bits
 		- Because this is much larger, we are using hexadecimals instead of decimal
-	-In order to use IPv6, every computer must be changed
+	- In order to use IPv6, every computer must be changed
 		- You need to start upgrading servers to have IPv6 because it doesn't make sense for clients to upgrade first
 		- Now, most of your devices now have two IP addresses (v4 and v6) provided by the ISP
 

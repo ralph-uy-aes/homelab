@@ -5,7 +5,7 @@
 - Layer 1 has no error checking because its just responsible for transferring the data
 - Datalink layer is responsible for access to the medium
     - The Logic Link Control is responsible for error checking
-- Layer 3 has error checking too, but for basic detection like bad packets rather tha full correction
+- Layer 3 has error checking too, but for basic detection like bad packets rather than full correction
 - Layer 4 has TCP checksum, so there is error checking
 
 #### Media Access Control (Datalink Sublayer)
