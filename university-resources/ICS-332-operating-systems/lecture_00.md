@@ -20,6 +20,7 @@
 - Taken on first lecture day of the week, unless holiday
 - Taken in first 10 minutes of class
 - Worst grade discarded
+- Go through lecture notes, think of what you might be asked during the actual quiz
 
 #### Terminology
 - This class will have a lot of terminology
