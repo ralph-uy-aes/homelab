@@ -1,121 +1,170 @@
-# Lecture 1 - Integers and Bases
+# Lecture 1a - Computer Architecture Overview
 
-#### Numbers and Computers
-- This course will use binary and hexadecimal
-- Need to know how computers store numbers
+#### Brief History
+- See ICS-312-assembly/lecture_02a.md
 
-#### Numbers and Bases
-- We're used to base 10 or decimal
-    - 25 = 2*10^1 + 5*10^0
-- Each number is decomposed into a sum of terms
-    - Technically there are infinite representations of numbers or terms
-- Any number can be written in any base `b` using `b` digits
-    - b = 10 is base 10 or decimal, digits go from 0-9
-    - b = 2 is base 2 or binary, digits go from 0-1
-    - b = 8 is base 8 or octal, digits go from 0-7
-    - b = 16 is base 16 or hexadecimal, digits go from 0-F
-- Computers use binary because it's easy to associates two states to an electrical current
-    - Low V = 0, High V = 1
-    - Associating 16 states to a current is complicated and error-prone
-- However, we aren't used to binary
-    - The lower the base, the more numbers or digits needed
-    - Also, unfamiliar and difficult to remember binary
-- Bases that are powers of 2 are very easy to translate to binary and are useful, as well as hexadecimal
+#### The Von-Neumann Architecture
+- Three Systems:
+    - Central Processing Unit: Performs operaitons and controls sequence of operations
+    - Memory Unit: Stores both code and data
+    - I/O System: How users interact with computer
 
-#### Binary Numbers
-- Counting in binary goes like:
-    - 0, 1, 10, 11, 100, 101, etc...
-- A binary number with d bits corresponds to integer values between 0 and `2^d-1`
+#### Memory Unit
+- Called Memory or RAM
+- Information is storedin binary form
+- 0: Low volt, 1: High volt
+    - bit (binary digit): denotes smallest unit of information 0 or 1
+- Basic unit of memory i a byte
+    - 1 byte = 8 bits
+    - 1 KiB = 2^10 bytes = 1,024 bytes
+    - 1 MiB = 2^10 KiB = 2^20 bytes
+    - 1 GiB = 2^10 MiB = 2^30 bytes
+    - 1 TiB = 2^10 GiB = 2^40 bytes
+    - 1 PiB = 2^10 TiB = 2^50 bytes
+    - 1 EiB = 2^10 PiB = 2^60 bytes
 
-#### Binary to Decimal Conversion
-- Very mechanical
-- Converting to decimal from binary:
-    - Compute the sum of terms
-    - Ex. `10010110_2 = 1*2^7 + 1*2^4 + 1*2^2 + 1*2^1 = 150`
-- The rightmost bit of a binary number is the least significant bit
-- The leftmost non-zero bit is the most significant bit
-- If the least significant bit = 0, then the number is even, otherwise it is odd
+#### Data Stored in Memory
+- Each byte is labeled by an address
+- A memory can be thought of as a huge drawer with numbers
+- Address identifies memory location of each byte in memory
+- Typically addresses are also written in binary
+    - The byte at address 00000011 is 00010010
+- Byte-addressable memory
+    - All addresses in RAM have the same number of bits (8-bit addresses)
+- The processor has instructions that say "Read the byte at address X and give me its value" and "Write some value into the byte at address X"
+- The memory unit Bus + RAM has the hardware for this
 
-#### Decimal to Binary Conversion
-- Integer divisions by 2
-- Ex. `37_{10} = X_2`
-    - `37=2*18+1`
-    - `18=2*9+0`
-    - `9=2*4+1`
-    - `4=2*2+0`
-    - `2=2*1+0`
-    - `1=2*0+1`
-    - Therefore `37_{10} = 100101_2`
-- Least significant bit is computed first
-- Most significant bit is computed last
-- Basically, go bottom to top when assembling the binary number
-- Continuing to divide gives us extraneous leading 0s
-- Shortcut 
-    - Find a power of 2 that's near the number then add or subtract whatever's needed:
-    - Ex. `37_{10} X_2`
-        - `37 = 32 + 5 = 2^5 + 5`
-        - `5 = 4 + 1 = 2^2 + 1`
-        - `1 = 2^0`
-        - Now, we know that 5, 2, 1 digits are all 1s, so `37_{10} = 100101_2`
+#### Fast Conversion
+- Represent `2^16` in simple memory terms
+    - Split it first: `2^6 * 2^10`
+    - Remember `2^10 bytes = 1 KiB`
+    - `2^6 = 64`
+    - All in all `2^16 = 64 KiB`
 
-#### Binary Arithmetic
-- Adding a 0 to the right of a binary number multiplies it by 2
-- Likewise, adding a 0 to the right of a decimal number multiplies it by 10
-    - It follows that adding a 0 to the right of a base-x number multiplies it by x
-- Adding two binary numbers is just like adding decimal numbers with a carry
-    - Ex. `1001_2 + 1111_2`
-        - Write one on top, one under and carry as needed
-        - Start right to left, like basic addition
-        - The `2^0` 1+1 carries in to `2^1`, and so on until `2^4` which its 1+1 carries into `2^5`
+#### Indirection
+- Basically pointers
+- An address is just information or a number
+- The memory content at a memory location is the address of another memory location
+    - We call this content a pointer / reference
+        - It's just an address, or a number
+    - At that address, there is some content we care about
+        - At address `1000 0000` the content is `0000 1000` which is an address
+        - At address `0000 1000` the content is `0000 0111` which is the decimal value `7` in binary
 
-#### Converting from Hex to Decimal
-- Straightforward, very similar to binary to decimal
-    - Ex. `A203DE_{16} = 10*16^5 + 2*16^4 + 3*16^2 + 13*16^1 + 14*16^0 = 10,617,822_{10}`
+#### Address vs Values
+- The job of the programmer is to know what memory content means
+- This is a well-known difficulty when writing assembly
+- High-level languages (Java) do all this for you, but in C you can do whatever you want
 
-#### Converting from Decimal to Hex
-- Very similar to decimal to binary, integer divisions by 16
-    - Ex. `1237_{10} = X_{16}`
-        - `1237 = 77*16 + 5`
-        - `77 = 4*16 + 13`
-        - `4 = 0*16 + 4`
-        - `1237_{10} = 4D5_{16}`
+#### Hardware Instructions
+- High-level Pseudo-code
+    - Step 1 Set the content of variable A to the content at address 1000 0000
+    - Step 2 Set the content of variable B to the content at address 1000 0001
+    - Step 3 Add A and B together and store the result in A
+    - Step 4 Set the content at address 1000 0001 to the contents of A
+    - Step 5 Go back to Step 1
+- Assembly
+    - x86-like
+        - S1: MOV AL, [1000 0000]
+        - S2: MOV BL, [1000 0001]
+        - S3: ADD AL, BL
+        - S4: MOV [1000 0001], AL
+        - JMP S1
 
-#### Hexadecimal Addition
-- Very similar to binary addition
-- Instead of `2` making a carry, it's instead `16` that makes a carry
-- Ex. `D1FF_{16} + A4DF_{16} = X_{16}`
-    - `F+F` in `16^0` is `15+15` in decimal, which is also `16+14`, this leaves us with `14` in `16^0` and 1 carried over to `16^1`
-    - This goes on until `16^3` which is `D+A_{16} = 10+13_{10}`, represent as `16+7_{10}`, leaves us `7` in `16^3`, carries 1 into `16^4`
-    - `D1FF_{16} + A4DF_{16} = 176DE_{16}`
+#### Instruction Encoding
+- Instructions are also encoded in binary based on specs of microprocessor
+- Ex. of x86 instruction encodings
+    - Instruction: SUB ECX, EDX
+        - Encoding: 29D1
+        - Size: 2 bytes
+    - Instruction: ADD EAX, 01
+        - Encoding: 83C0FFFFFFFF
+        - Size: 6 bytes
+    - Instruction: ADD AX, 2
+        - Encoding: 050200
+        - Size: 3 bytes
+- More instructions leads to larger executable binaries
+    - An assembler transforms assembly into binary, so assembly programmers typically don't know the binary code for instructions
 
-#### Why Hexadecimal?
-- Binary is important because computers operate in binary
-    - However, it is cumbersome because you need lots of digits to represent relatively small numbers in decimal
-- Hexadecimal is important because it makes it possible to represent binary in a compact form, removing the cumbersome quality
-    - Conversion between binary and hex is straightforward, just need to convert hex digits into 4-bit numbers and 4-bit binary numbers into hex digits
-    - This makes sense because `2^4 = 16` which is the base of hexadecimal, meaning 4 digits in binary = 1 digit in hexadecimal
+#### Address SPace
+- Continuous amount of bytes, some are code, some are data
+    - Program is stored in RAM along with data
+- All bytes in RAM that belong to the program are called the program's address space
+    - Contains code and data and other things
 
-#### Hex to Binary Conversion
-- `A43FE2_{16} = X_2`
-- Just literally convert each hex digit into four binary digits
-- `A_{16} = 10_{10} = 1010_2`
-- `4_{16} = 4_{10} = 0100_2`
-- `3_{16} = 3_{10} = 0011_2`
-- `F_{16} = 15_{10} = 1111_2`
-- `E_{16} = 14_{10} = 1110_2`
-- `2_{16} = 2_{10} = 0010_2`
-- Then assemble from top to bottom
-    - `A43FE2_{16} = 1010 0100 0011 1111 1110 0010_2`
-- Important: You must have leading 0s for the 4-bit numbers which is what a computer would store anyway
-- This works because `F_{16} = 15_{10}` and a 4-bit number has `2^4-1 = 15_10` as a maximum value
+#### The CPU
+- Job of the programmer to know what memory content means, to the CPU it's just a bunch of numbers
+- Well-known difficulty when writing assembly
+- High-level languages do all this for you, but in C, you can do whatever you want
 
-#### Binary to Hex Conversion
-- `1001010101111_2 = X_{16}`
-- Split the binary number into 4-bit numbers which we convert separately, start from right to left and add leading 0s to the most significant bit as needed
-- `0001 0010 1010 1111_2`
-- `0001 = 1`
-- `0010 = 2`
-- `1010 = A`
-- `1111 = F`
-- Then assemble
-    - `1001010101111_2 = 12AF_{16}`
+#### What's in the CPU?
+- Registers: values that hardware instructions work with
+    - Very very small, very very fast memory
+    - Limited number of registers
+- Arithmetic and Logic Unit (ALU): what you do computation with
+    - Used to compute a value based on current register values and store the result back into a register
+    - +, *, /, -, OR, AND, XOR, etc...
+- Program Counter: points to the next instruction
+    - Increments by 1 after every fetch
+- Current Instruction: holds the instruction that's currently being executed
+- Control Unit: decodes instructions and make them happen
+    - Logic hardware that decodes instructions and sends the appropriate signals to hardware components in the CPU
+
+#### Fetch-Decode-Execute Cycle
+- Control unit fetches the next program instruction from memory
+    - Using the program counter to find out where the instruction is located in the memory
+- Control unit decodes the instruction and signals are sent to hardware components
+- Instruction is executed
+    - Operands are fetched from memory and put in registers
+    - ALU executes computation and stores the computed results in the registers
+    - Register values are stored back to memory if needed
+- Computers today implement many variations on this model
+    - Can still program with this model in mind, but without understanding performance issues
+- See slides for visualization
+- Basically, a CPU is a memory modifier that takes u to different memory states
+    - This is a simplified view of how things work
+    - A control unit isn't a single thing, it's multiple control and data paths
+    - There are multiple ALUs, caches, CPUs or cores
+    - Execution is pipelined, one is fetched, another is being executed
+
+#### The Clock
+- Every computer maintains an internal clock that regulates how quickly instructions can be executed, and is used to synchronize systems like a metronome
+- Each event in the FDE cycle happen at a different tick of the clock
+- Frequency of the clock is the clock rate
+- Time between two clock ticks is called a clock cycle or cycle for short
+
+#### Faster/Slower Clock Rate
+- Higher clock rate = shorter clock cycle
+- Faster clock doesn't necessarily mean faster computer
+
+#### Multi-Core
+- All our machines are multi-core
+- But what we have described so far is as single core
+
+#### Moore's Law
+- In 1965, Gordon Moore (co-founder of Intel) predicted that transistor density doubles every 24 months
+- This is true, but there is a misinterpretation that computers get twice as fast every 2 years (this is FALSE!!!!)
+- But in 2020, Moore's Law started plateauing, we cannot pack more transistors
+    - What do we do at the end of Moore's Law?
+
+#### Multi-core Chips
+- Cannot increase clock rate further because of power and heat issues
+    - Instead of speeding up one microprocessor or core, just add another one
+- Multi-core processors
+    - Multiple low clock rate processors on a chip
+- Most developers would rather have a 100GHz core than 50 2GHz cores
+    - Developers hated multi-core processors (harder to write software)
+    - Not a cool innovation, more like a bandage to a deep wound
+
+#### I/O System
+- You know these (keyboards, screens, disks)
+
+#### Main Takeaways
+- ENIAC was the first electronic computer
+- Von Neumann architecture is "it" for now
+- RAM, Addresses, and Values (indirection)
+- Instruction set architectures
+- CPU: Registers, ALU, Control Unit
+- FDE cycle
+- Clock and Clock Rate
+- Moore's Law and why we have multi-core machines
