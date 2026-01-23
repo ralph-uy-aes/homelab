@@ -1,0 +1,20 @@
+#### q2 Registers and Operands
+- Does this instruction modify AL?
+    - `add ax, 04300h`
+    - No because the last two hex are `00`
+- Value of register CX after these instructions?
+    - `mov cx, -1`
+        - cx = FFFF
+    - `mov al, 043h`
+        - al = 043
+    - `add cl, al`
+        - FF + 43
+        - cx = FF42
+- Value of register AX after these instructions
+    - `mov eax, 043 11 EE FFh`
+        - eax = 43 11 EE FF
+    - `add ah, 011h`
+        - 43 11 FF FF
+    - `inc eax`
+        - 43 12 00 00
+        - ax = 00 00
