@@ -86,6 +86,10 @@
 #### Generation 3: Integrated Circuits
 - Transistors get smaller every year and get packed and compressed into small circuits
 - IBM was the first brand to build a computer using entirely Integrated Circuits
+- Kilby and Noyce came up with IC in the late 50s
+    - Integrated Circuits are smaller than single transistors, made computers smaller, faster, and cheaper
+- Seymour Cray created Cray Research Corporation
+    - Cray-1: $8.8 million, 160 million instructions per second, 8 Mbytes of memory
 
 #### Generation 4: VLSI (Very Large Scale Integration)
 - A CPU was packed into a single chip called a microprocessor
@@ -94,6 +98,15 @@
     - In 1997, the 50th anniversary of the ENIAC was actually rebuilt at U. Penn into a single chip
 - Microprocessors enabled the creation of personal computers
     - 1977's Apple II and 1981 IBM PC
+- VLSI just means more than 10k transistors in a single chip
+    - LSI: 1k-10k transistors
+    - MSI: 100-1k transistors
+    - SSI: 10-100 transistors
+- Moore's Law: Number of transistors in a chip doubles every 2 years or so
+- Intel made the 1004 microprocessor in 1971
+    - 4-bit 108KHz
+    - RAM chip: 4Kbit
+    - 
 
 #### Generation 5
 - Stupid term used after generation 4
