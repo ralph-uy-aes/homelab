@@ -76,9 +76,14 @@
 
 #### Generation 2: Transistors
 - Just like a vacuum tube, but without all the mechanical drawbacks
+- Bradeen, Brattain, and Shockley invented the transistor at Bell Labs
+    - ENIAC was unreliable, lot more downtime than uptime
+    - Transistors had lower power consumption, smaller, more reliable, cheaper, and much lower heat dissipation
 - ENIAC was rebuilt using transistors
 - Still really big, but small compared to ENIAC
 - IBM sold transistor-based computers
+    - IBM 7094: scientific applications
+    - IBM 1401: business applications
 - CDC 6600 was the fist supercomputer
     - $10M, 10-million instructions/sec
 - Transistor-based computers enabled space travel and other advances
@@ -86,10 +91,13 @@
 #### Generation 3: Integrated Circuits
 - Transistors get smaller every year and get packed and compressed into small circuits
 - IBM was the first brand to build a computer using entirely Integrated Circuits
+    - IBM System/360, was the first built out of IC
+    - Introduced assembly code which was portable across different machines in the family
 - Kilby and Noyce came up with IC in the late 50s
     - Integrated Circuits are smaller than single transistors, made computers smaller, faster, and cheaper
 - Seymour Cray created Cray Research Corporation
     - Cray-1: $8.8 million, 160 million instructions per second, 8 Mbytes of memory
+    - Cray also led the creation of the CDC 6600
 
 #### Generation 4: VLSI (Very Large Scale Integration)
 - A CPU was packed into a single chip called a microprocessor
@@ -106,7 +114,6 @@
 - Intel made the 1004 microprocessor in 1971
     - 4-bit 108KHz
     - RAM chip: 4Kbit
-    - 
 
 #### Generation 5
 - Stupid term used after generation 4

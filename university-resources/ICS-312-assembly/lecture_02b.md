@@ -11,7 +11,6 @@
     - Memory Unit: Stores both code and data
     - I/O System: How users interact with computer
 
-
 #### Data Stored in Memory
 - Each byte is labeled by an address
 - A memory can be thought of as a huge drawer with numbers
