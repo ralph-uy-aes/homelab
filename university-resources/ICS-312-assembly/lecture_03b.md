@@ -105,3 +105,46 @@
 - When the program runs, each label then corresponds to an actual 32-bit numerical value
 - At run time, the bytes are put in RAM somewhere by the OS
 - See the slides for a visualization
+
+#### Endianess
+- In the previous slide, the 4-byte memory content for a double word that contains 254 = 000000FEh
+- Seems to make sense, but Intel processors do not do this
+    - Last 4 bytes shown in the previous slide are wrong
+- The scheme shown in the slide examples is the Big Endian order
+- Instead Intel x86 processors use Little Endian order (reversed bytes)
+
+#### Register vs Memory Order
+- In Registers (regardless of machine typ), values are always in correct order or Big Endian Order
+- In a Little Endian machine, each time you write a register value to RAM or read RAM into a register, the byte order is reversed
+
+#### Little/Big Endian
+- Motorola and IBM use Big Endian
+- Intel/AMD uses Little Endian
+- When writing in high-level languages, you don't really care
+- But in languages that can expose addresses like C, Endianess matters
+- Thus, one can write code that's not portable between IBM and Intel
+    - Meaning, you can't really write non-portable code using high-level languages
+- Endianess only matters when writing multi-byte quantities
+    - Of course, if you only write one byte, then its the same reversed
+    - When doing Little Endian conversions, a shortcut is ignoring `db`
+- Some processors can be configured to use either type of endianess MIPS
+- Little Endian is only in RAM by the way
+- BITS WITHIN BYTES ARE NOT REVERSED, ONLY BYTE ORDER IS REVERSED
+
+#### What About Networks?
+- Imagine you have a Motorola phone that is Big Endian
+    - Send 12 to a network (0000000C)
+    - Network is Little Endian and interprets it as (0C000000)
+    - There is a mismatch
+- At some point, this is solved by standardizing a network order
+    - Network order is BIG ENDIAN, so every multi-byte quantity on the network must always be in Big Endian
+- Little Endian machines must convert to Big Endian before sending AND receiving to the network (this is overhead)
+- Network methods
+    - `htonl` (host to network long) and `htons` (host to network short) both reverse the bytes into a new variable
+
+#### Important Takeaways
+- The three sections of a NASM program (data, bss, and text)
+- The data and bss directives for declaring labelled bytes
+- The fact that labels are really addresses, and not at all variables
+- Little and Big Endianness
+- How networks deal with endianness

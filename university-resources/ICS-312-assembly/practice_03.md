@@ -18,3 +18,32 @@
     - `inc eax`
         - 43 12 00 00
         - ax = 00 00
+
+#### q3 Data Layout
+- Ignore every `db` (don't reverse order)
+- `00 00 00 09` flip add one
+    - `FF FF FF F7`
+- `dcba` Get the ASCII hex, remember a starts at 61 and A starts at 95
+    - `64 63 62 61`
+- `times 3 dw 011b`, convert to hex first
+    - `00 03 00 03 00 03`
+    - Little endian that `03 00 03 00 03 00`
+- `A3 00`
+- `F7 FF FF FF 64 63 62 61 03 00 03 00 03 00 A3 00`
+- Process:
+    - Convert everything to hex
+    - 2's complement all negatives
+    - Reverse orders of non-db
+    - Assemble
+
+#### q4 Data Layout
+- `00 16`
+    - Flip add one `FF EA`
+    - Reverse `EA FF`
+- `62 61 00`
+- `00 00 00 13 00 00 00 13`
+    - Reverse per `dd` not the whole thing `13 00 00 00 13 00 00 00`
+- `00 00 00 03 00 10`
+    - Reverse per `dw`, not the whole thing `00 00 03 00 10 00`
+- Altogether `EA FF 62 61 00 13 00 00 00 13 00 00 00 00 00 03 00 10 00`
+
