@@ -52,10 +52,31 @@
     - `mov ax, [L3]`
     - `mov [L1], eax`
 
-**20 MINUTES LATE** SKIP TO"BIG EXAMPLE" TAKE NOTES LATER
+#### Brackets or no Brackets
+- `mov eax, [L]`
+    - Copies content at address L into eax
+    - Copies 32 bits of content, because eax is 32 bits
+- `mov eax, L`
+    - Copies the address L into eax
+    - eax now contains a number that happens to be an address (eax is a pointer)
+- `mov ebx, [eax]`
+    - Copies content at the address whose value is stored in eax to ebx
 
+#### Indirection with Offset
+- You can add/subtract a constant offset to the address inside []
+- Ex. `mov dword [eax+2], 42`
 
-#### Label Values
+#### Low/High Level Indirection
+- `int *ptr;`
+- `*(ptr + 2) = -1;` (ptr is a pointer to 4-byte values)
+- Equivalent to
+- `mov eax, ptr;`
+- `mov dword [eax+8], -1` (it is + 8 because dword is 4-bytes each)
+- Equivalent to
+- `int *ptr;`
+- `*((int *) ((char *)ptr + 8)) = -1;`
+    - Casting `ptr` to a `char` makes it a pointer to 1-byte elements
+    - Casting back to `int` lets you write a 4-byte value at the pointer's address
 
 #### Assembly is Dangerous
 - The Big example is a really terrible program
