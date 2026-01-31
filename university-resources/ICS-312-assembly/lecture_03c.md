@@ -51,3 +51,26 @@
     - `mov eax, [L2]`
     - `mov ax, [L3]`
     - `mov [L1], eax`
+
+**20 MINUTES LATE** SKIP TO"BIG EXAMPLE" TAKE NOTES LATER
+
+
+#### Label Values
+
+#### Assembly is Dangerous
+- The Big example is a really terrible program
+- Good demonstration of why assembly programmers must be careful
+- We were able to store 4 bytes into a 2-byte label, overwriting the first 2 characters of a string that happened to be stored in memory next to that 2-byte label
+- Another dangerous thing is the use of unaligned memory accesses
+    - Stored a 4-byte quantity at some address
+    - Incremented address by 1
+    - Read a 4-byte quantity from the incremented address
+    - Removes all notion of structured memory
+
+#### Important Takeaways
+- Indirection with the [ ] bracket NASM syntax
+    - At most one set of brackets for operands to an instruction
+- The need to specify data size when ambiguous
+- The fact that labels are not variables, because they have no types
+- The difference between an address offset in low-level assembly and in high-level code
+- The “danger” / “power” of being able to dereference any address willy-nilly

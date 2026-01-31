@@ -47,3 +47,33 @@
     - Reverse per `dw`, not the whole thing `00 00 03 00 10 00`
 - Altogether `EA FF 62 61 00 13 00 00 00 13 00 00 00 00 00 03 00 10 00`
 
+#### q2 Program Tracing
+- `eax` [var1]
+- `eax` [var1] + 3
+- `eax` 12 17 A3 00
+- `ebx` 12 17 A3 00
+- `ebx` 12 17 A3 05
+- `[var1]` 05 A3 17 12
+
+#### q3 Program Tracing
+- `eax` var3
+- `ebx` var1
+- `eax` var3 - 4 = var2
+- `ebx` var1 + `[eax] = 03 00 00 00`
+    - Little endian of `[eax] = 00 00 00 03 = 3`
+    - `ebx` = var1 + 3
+- `[ebx]` = 42
+    - 42 to hex = 2A
+    - `[var1]` = 62 63 61 2A
+
+#### q4 Program Tracing
+- `eax` 13 C3 B2 A1
+- `eax` !
+- `[L2]` 14 C3 B2 A1
+- `bx` 00 13
+- `eax` L3
+- `ecx` 01 B3 68 65
+- `bl` 13
+    - `cl` 65
+    - `bl` 78
+- `[eax]` A1 B2 00 13

@@ -67,3 +67,66 @@
 - Tiny, 16KiB
 - Functions cannot allocate on this stack
 - Difference between user-level development and kernel-level development
+
+#### Process Life Cycle
+- Each process goes through a lifecycle
+- A finite number of possible states
+- Transitions allowed between some states
+    - Happen when some event occurs
+
+#### Single-Tasking Ones
+- OSes used to be single-tasking, only one process could be in memory at a time
+- MS-DOS is the most well known example
+    - It overwrites part of itself to load the program's code in memory
+- The process lifecycle was simple before
+    - New --Accepted--> Running --I/O Initialized--> Waiting --I/O Completed--> Running-->...--Exit--> Terminated
+- Problem is that while a process is doing I/O, the CPU is idle
+    - Waste and an inconvenience
+
+#### Multi-tasking
+- Modern OSes can run multiple processes
+- There is a system call to create a new process that any process can place to create a child process "fork"
+- When a process terminates, its RAM space is reclaimed by the OS
+- Problem before: A process can be ready to run but can't because another process is running
+    - Solution: Lifecycle needs a new state
+
+#### Ready State
+- A process can be ready, but not currently running
+- This is the ready state
+- OS select one of the ready processes whenever CPU becomes idle
+    - "Scheduling"
+- This is how OS virtualizes the CPU, each process has the illusion it is the only one using the CPU
+- New process lifecycle
+    - New --Accepted--> Ready --Scheduled--> Running --Descheduled--> Ready or --I/O Initialized--> Waiting --I/O Completed--> Ready --Scheduled--> Running-->...--Exit--> Terminated
+    - Doing I/O, makes you descheduled, putting you back into the Ready state. Doesn't put you back in Running
+
+#### Process Control Block
+- OS uses a data structure to keep track of each process
+- This data structure is called the Process Control Block (PCB) which contains:
+    - Process State
+    - Process ID
+    - User ID
+    - Saved Register Values
+    - CPU-Scheduling Information
+    - Memory-Management Information
+    - Account Information
+    - I/O Status Info
+
+#### Process Table
+- A list of PCBs
+- Kept in RAM at all times
+- Has to be bounded because Kernel size is also bounded
+    - It can fill up, (too many processes)
+- If you keep creating new processes, at some point, the process creation will fail
+    - Remember fork bombs
+
+### Main Takeways
+- Processes are running programs
+- Multiple processes co-exist in RAM
+    - The old single-tasking MSDOS case
+- The concept of a process address space
+    - Code/text, heap, data, stack
+- The Process Control Block
+- The Process Table
+- The Process lifecycle
+- Onward to the Process API....
