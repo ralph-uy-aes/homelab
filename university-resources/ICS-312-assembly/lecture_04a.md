@@ -93,4 +93,7 @@
 - Takes three arguments
     - One integer to distinguish outputs
     - Address at which memory should be displayed
-    - Number pls one of 16-byte segments that should be displayed
+    - Number plus one of 16-byte segments that should be displayed
+
+
+
