@@ -2,7 +2,7 @@
 
 #### Communicating Processes?
 - So far, we have seen independent processes
-	- Each runs code indeendently
+	- Each runs code independently
 	- Parents are aware of their children and vice versa, but they do not interact
 - Often we need processes to cooperate
 	- To share information
@@ -55,28 +55,12 @@
 
 #### RPC (Remote Procedure Call)
 - Provides a procedure invocation abstraction across processes
-- A client invokes ap rocedure in another process as it would invoke it directly itself
+- A client invokes a procedure in another process as it would invoke it directly itself
 - Magic is performed through a client stub
 	- Marshal the parameters
 	- Send data over to server
 	- Wait for server's answer
 	- Unmarshal the returned values
-
-i = 3
-pid
-new = 1
-pid = 0
-i = 2
-new = 2 
-pid = 0
-i = 1
-new = 3
-pid = 0
-i = 0
-
-
-
-
 
 
 
