@@ -54,3 +54,34 @@
 - We have many voodoo constants in practice
 - Easy to implement based on a configuration, but what is a good configuration
 - People have experienced over the years and a good rule of thumb is large time quanta for lower-priority ready queues
+
+#### Multi-Processor Scheduling
+- All our processors are multi-core
+- OSes need to do scheduling across multiple cores
+- Whenever a core is idle, put a job on it based on MLFQ scheme
+- But if processes keep jumping around, they won't be able to keep their cache, it makes cache useless and memory slow
+  
+#### Scheduling for Cache Affinity
+- Each job has some affinity
+- One or a few jobs bounce around, but other jobs stay put, good for the cache
+
+#### Linux Scheduling
+- Lot of scheduling ideas and developments
+- Considered to have very good schedulers
+- Well-known algorithms
+    - O(1) Scheduler: multi-queues, bitmap tricks, MLFQ-like
+    - CFS (Completely Fair Scheduler): stores jobs in rb trees instead of queues
+    - BFS brainfuck scheduler
+    - EEVDF (Earliest Eligible Virtual Deadline First)
+- Default since has ben EEVDF 
+    - Fast, more predictable than CFS
+
+#### Main Takeaways
+- Picking a time quantum is hard
+- Multi-Level Feedback Queue (MLFQ) scheduling
+    - Multiple RR queues with different time quanta
+    - Goal: not penalize interactive jobs
+- Priority boosting to avoid starvation
+- Tracing MLFQ scheduling is easy (right?)
+- Multi-core scheduling: cache affinity
+- Real-world OSes all use roughly the same ideas with tweaks, bells, and whistles
