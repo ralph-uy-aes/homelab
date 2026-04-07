@@ -13,3 +13,7 @@
 - To turn on bits: use OR (with appropriate 1s in bitmask)
 - To turn off bits: use AND (with appropriate 0s in bitmask)
 - To flip bits: use XOR (with appropriate 1s in bitmask)
+
+#### ughhh
+- I just want spring break to start already
+- Sorry for not filling this lecture out all the way :(

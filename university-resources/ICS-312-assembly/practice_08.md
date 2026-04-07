@@ -64,3 +64,25 @@ xor eax, ebx
 xor ebx, eax
 ;eax 111
 ;ebx 010
+
+eax % 64
+eax mod 64
+and eax, 63
+
+mov ebx, 1
+shl ebx, cl
+xor eax, ebx
+
+mov eax, -1
+shl eax, cl
+not eax
+
+mov eax, -1
+mov ebx, -1
+shl ebx, cl
+
+11111111 11110000
+
+mov eax, 10000000 0000000
+sar eax, 2
+shr eax, 7
