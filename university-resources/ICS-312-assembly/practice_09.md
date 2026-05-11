@@ -64,3 +64,57 @@ ebp
 16bytes per call
 
 16*ceil M/12 + 1
+
+f(int a){
+    if (a == 0) {
+        return 13;
+    }
+    else {
+        return 12;
+    }
+}
+
+int f (int a, int b){
+    if a
+}
+
+int eax = 0;
+int ecx = 0;
+int edx; 
+do{
+    edx = ecx;
+    edx *= 4;
+    eax += edx;
+    ecx++;
+} while (ecx != 20);
+print (eax + "\n");
+
+char *ptr eax = 0xAABBCC12;
+while(*ptr){
+    *ptr = 0;
+    ptr++;
+}
+
+push esp, 3
+push esp, 2
+
+
+b=3
+a=2
+ret@
+saved ebp
+z=?
+u=5
+b=4
+a=1
+ret@
+saved ebp
+z=?
+u=5
+b=5
+a=0
+ret@
+saved ebp
+z=?
+u=5
+
