@@ -1,14 +1,4 @@
 # 📚 ICS 169 – Lab 2: Performing a Vulnerability Assessment
-## Complete Comprehensive Notes
-
----
-
-> **✅ Notes compiled for:** ICS 169 – Foundations of Cybersecurity
-> **Lab:** 2 – Performing a Vulnerability Assessment
-> **Date:** [Current Date]
-> **Status:** ✅ Full Lab Completed
-
----
 
 ## 📖 Table of Contents
 

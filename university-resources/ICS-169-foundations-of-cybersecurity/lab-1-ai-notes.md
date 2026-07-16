@@ -1,11 +1,4 @@
 # 📚 ICS 169 – Lab 1: Exploring the Seven Domains of a Typical IT Infrastructure
-## Complete Comprehensive Notes
-
----
-
-> **✅ Note for future:** For subsequent labs, I will **confirm with you** before generating the final comprehensive Markdown summary. Please indicate when you have fully completed a lab, and I will ask for confirmation before compiling the master document.
-
----
 
 ## 📖 Table of Contents
 
