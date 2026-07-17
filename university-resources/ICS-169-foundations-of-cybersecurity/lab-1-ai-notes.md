@@ -459,6 +459,3 @@ Computer Configuration
 | **RAID 1 (Mirroring)** | Two disks with identical copies of data for fault tolerance. |
 | **TrueNAS** | FreeBSD-based Network Attached Storage (NAS) OS. |
 
----
-
-*📝 End of Lab 1 Complete Notes – ICS 169 Foundations of Cybersecurity*

@@ -755,11 +755,3 @@ The internal penetration test of the Domain Controller has identified [number] v
 12. **Penetration test reports** must translate technical findings into actionable insights for both technical and non-technical stakeholders.
 13. **The DMZ is a high-risk zone** – public-facing servers should be scanned regularly, and unnecessary services (SSH, MySQL) should be restricted.
 14. **OpenVAS/Greenbone provides a free alternative** to commercial vulnerability scanners like Nessus.
-
----
-
-*📝 End of Lab 2 Complete Notes – ICS 169 Foundations of Cybersecurity*
-
----
-
-> **✅ Ready for Lab 3!** Please indicate when you have completed the next lab, and I will confirm before generating the final comprehensive summary.

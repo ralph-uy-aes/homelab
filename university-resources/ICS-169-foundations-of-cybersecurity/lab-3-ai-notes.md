@@ -554,11 +554,3 @@ EAPOL (Extensible Authentication Protocol over LAN) is the authentication framew
 18. **Encryption does not hide everything** – Wireshark still shows IPs, ports, and timing metadata.
 19. **Patterns are key:** Understanding normal traffic helps identify anomalies (e.g., deauth storms).
 20. **Wireshark is a foundational tool** for network troubleshooting and security analysis.
-
----
-
-*📝 End of Lab 3 Complete Notes – ICS 169 Foundations of Cybersecurity*
-
----
-
-> **✅ Ready for Lab 4!** Please indicate when you have completed the next lab, and I will confirm before generating the final comprehensive summary.
