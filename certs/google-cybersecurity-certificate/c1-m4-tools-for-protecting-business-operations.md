@@ -32,7 +32,7 @@ Entry-level analysts use a combination of industry-standard tools and playbooks 
 
 ---
 
-# Creating a Cybersecurity Portfolio
+## Creating a Cybersecurity Portfolio
 
 A portfolio demonstrates your skills, knowledge, and passion to potential employers—it goes deeper than a resume.
 

@@ -63,7 +63,7 @@
 
 ---
 
-# Module 2 Glossary
+## Module 2 Glossary
 
 - **Asset** – Item of value to an organization.
 - **Attack vectors** – Pathways attackers use to penetrate defenses.
