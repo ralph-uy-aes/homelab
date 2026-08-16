@@ -181,7 +181,6 @@ nmap --script=http-put --script-args http-put.url='/dav/shell.php',http-put.file
 
 ## Key Takeaways
 
-- **Nmap** is the "Swiss Army Knife" of networking—essential for reconnaissance and penetration testing.
 - Core commands: `-sn` (ping sweep), `-sS` (stealth scan), `-sV` (version detection), `-O` (OS detection), `-A` (aggressive scan).
 - **Always use `-sn` instead of the outdated `-sP`** for ping sweeps.
 - **OS scanning** uses `-O` (not `-sV`, which is for version detection).
