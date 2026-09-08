@@ -1,0 +1,52 @@
+# IG.04 - Website Recon & Footprinting
+
+### What Are We Looking For?
+- IP Addresses
+- Directories hidden from search engines
+- Names
+- Emails
+- Phone numbers
+- Physical Addresses
+- Web technologies
+
+### Practical Demo
+- Go to a site, in this case, hackersploit.org
+- First thing, let's get an IP address
+    - Usually, websites DO have a proxy or a firewall
+    - Let's resolve the domain name into an IP address
+        - `host hackersploit.org`
+        - It has two IPv4 addresses because there's a proxy/firewall
+        - We also get the mail server and its domain name
+- Next, try to identify any names or email addresses
+    - At the bottom, it has links to other social media
+    - But, the best place to start is `robots.txt`
+        - This file is typically used by search engines when they crawl
+        - Useful for search engine indexing, but could accidentally potentially reveal confidential information
+        - So, the `robots.txt` file tells the engine to disallow or allow certain directories from being leaked 
+        - Usually used to prevent the indexing of admin pages
+    - Also, let's look at its sitemap in `sitemap_index.xml`
+        - Used to provide search engines with an organized way of indexing websites
+        - Page Sitemap - could contain an index of various directories or pages of the site
+        - Category Sitemap - displays list of categories, some could be hidden on the frontend
+        - Post Sitemap - provides search engine with the posts inside of the website
+- Let's use some browser plugins or extensions
+    - BuiltWith
+        - Technology profiler
+        - Gives you the website's tech stack
+        - Tells you what is running on the website
+        - Also tells you widgets, plugins, and themes in WordPress sites or other CMS
+    - Wappalyzer
+        - Also a technology profiler
+        - Same thing as BuiltWith
+    - whatweb
+        - Pre-packaged with Kali
+        - Can perform a stealthy scan
+        - Syntax: `whatweb hostname`
+        - Output is not as pretty, but still really helpful
+- Lastly, you can just download the entire website with HTTrack
+    - This is a website copier
+    - Puts all the website files from the server into your local storage
+    - Download
+        - `sudo apt-get install webhttrack`
+    - Starts a server on your machine when opened
+    - Useful for source code analysis (bug bounties)
