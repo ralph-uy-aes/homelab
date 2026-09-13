@@ -1,4 +1,4 @@
-# L.01 - Assessment Methodologies: Information Gathering CTF 1
+# SC.01 - Assessment Methodologies: Information Gathering CTF 1
 
 ### Overview
 - Overview: This lab focuses on information gathering and reconnaissance techniques to analyze a target website. Participants will explore various aspects of the website to uncover potential vulnerabilities, sensitive files, and misconfigurations. By leveraging investigative skills, they will learn how to identify critical information that could assist in further penetration testing or exploitation.
