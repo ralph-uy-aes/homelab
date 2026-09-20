@@ -1,13 +1,24 @@
-# FS.01 - Active Information Gathering
+# FS.06 - Network Mapping
 
-### Penetration Testing Methodology
-1. Information Gathering
-2. Enumeration
-3. Exploitation
-4. Post-Exploitation
-5. Reporting
+### Network Mapping
+- Every host connected to the internet or private network has a unique IP address
+- Penetration testers can know which hosts are within scope and are online with network mapping
+- Important to know network's layout, architecture, and entry points
 
-### Active Information Gathering
-- We are currently in the information gathering stage with Active Information Gathering, which comes right after Passive Information Gathering
-- This is the assessment phase where tester actively interacts with target directly to collect data or identify potential vulnerabilities
-- Go beyond passive recon and may include activities such as scanning, probing, and direct interaction
+### Objectives
+- Discover Live Hosts
+- Identify Open Ports and Services
+- Map Network Topology
+- OS Fingerprinting
+- Service Version Detection
+- Identifying Filtering and Security Measures
+
+### Nmap
+- Open source network scanning tool
+- Powerful and versatile, great for security professionals, network admins, pentesters
+- Offers a range of features and functionalities that make it a valuable tool 
+- Functionality
+    - Host Discovery
+    - Port Scanning
+    - Service Version Detection
+    - OS Fingerprinting
