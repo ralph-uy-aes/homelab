@@ -11,8 +11,6 @@ Tick each box as you finish it. Every task has a time box and, where one exists,
 - A 15-minute live debrief in front of senior pentesters.
 - The voucher includes the training and is valid for 12 months. Confirm current price, retake terms and scheduling on the [PNPT page](https://certifications.tcm-sec.com/pnpt/) before buying.
 
-**Time off:** the exam week is 7 consecutive days (Apr 12–18). Request leave from both jobs by **Feb 1**. Lock the exam date with TCM as soon as you buy the voucher so the deadline is external, not self-set.
-
 ## The four phases
 
 | Phase | Dates | Study days | Focus |
