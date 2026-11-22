@@ -39,15 +39,19 @@ Default exam date stays April 12; decide after Mock 1 (Mar 27–28) whether to p
 5. **Repeat until clean.** Redo any lab you needed hints for until you can do it with no help and no notes.
 6. **Weekly checkpoint.** At the end of each Sunday, have Claude quiz you on that weekend. Under \~80%: repeat the weak part before moving on.
 7. **Try first, then hint.** 30 minutes alone, then a hint, then a writeup.
-8. **Access check.** Several rooms are marked Premium (Breaching Active Directory, Exploiting Active Directory, Wreath) and retired HTB machines need VIP. Check each on its page before the day it's scheduled; the plan names a fallback where one exists.
+8. **Access check.** This plan uses only free TryHackMe rooms and free local labs, with no HTB VIP machines. If a room shows a paywall, skip it, do the hands-on part in your own lab, and tell Claude so it can be swapped.
 
 ## Materials
 
-- **TryHackMe modules:** [Networking](https://tryhackme.com/module/networking), [Windows Fundamentals](https://tryhackme.com/module/windows-fundamentals), [Active Directory Security Testing Basics](https://tryhackme.com/module/active-directory-security-testing-basics), [Privilege Escalation](https://tryhackme.com/module/privilegeescalation), [Pentesting Methodologies and Reporting](https://tryhackme.com/module/pentesting-methodologies-and-reporting).
+- **Free TryHackMe rooms:** a community [list of free rooms](https://github.com/Sa-m-anta/tryhackme-free-rooms). It can lag behind TryHackMe; if a room shows a paywall, skip it.
 - **TCM:** [Practical Ethical Hacking course](https://academy.tcm-sec.com/p/practical-ethical-hacking-the-complete-course), the free [15-hour version on freeCodeCamp](https://www.freecodecamp.org/news/full-penetration-testing-course), [Windows Privilege Escalation for Beginners](https://classcentral.com/classroom/youtube-windows-privilege-escalation-for-beginners-182503) and [Linux Privilege Escalation for Beginners](https://classcentral.com/course/youtube-linux-privilege-escalation-for-beginners-179900) (both Cyber Mentor on YouTube).
 - **Previous passers' notes:** [ciwen3/PNPT](https://github.com/ciwen3/PNPT), [TrshPuppy/PNPT-study-guide](https://github.com/TrshPuppy/PNPT-study-guide), [AD Exploitation Cheat Sheet](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet), and a Jan 2026 passer's guide: [How to pass the PNPT (2026)](https://dev.to/mr-3/how-to-pass-the-pnpt-2026-3n6f).
 - **Tools:** [NetExec docs](https://www.netexec.wiki/) and a [NetExec cheat sheet](https://github.com/seriotonctf/cme-nxc-cheat-sheet).
-- **Walkthroughs after you try a box:** IppSec's videos on YouTube and [0xdf's writeups](https://0xdf.gitlab.io).
+- **Walkthroughs after you try a room:** IppSec's videos on YouTube and [0xdf's writeups](https://0xdf.gitlab.io).
+
+## Optional: only if they're free for you
+
+None of these are in the schedule. TryHackMe's rebuilt AD rooms (open each and check for a paywall): [Active Directory Security Testing Basics](https://tryhackme.com/module/active-directory-security-testing-basics). Premium or VIP: TryHackMe Wreath, Breaching Active Directory and Exploiting Active Directory; HTB retired machines such as Sauna, Cicada, Support, Timelapse, Return and Administrator.
 
 ## Documentation system
 
@@ -60,7 +64,7 @@ Your report depends on your notes, so set this up before Day 1.
 
 | Date | Day | Room or box | Topic | Status | Key commands | Gaps |
 | --- | --- | --- | --- | --- | --- | --- |
-| Nov 22 | 1 | Wireshark: The Basics | Packet capture | Done | tcpdump, display filters | Practice filters |
+| Nov 22 | 1 | Networking Concepts | Packet capture | Done | tcpdump, display filters | Practice filters |
 
 ## Tips from a Jan 2026 passer
 
@@ -69,7 +73,7 @@ One person's account; check anything exam-specific against your own Rules of Eng
 - Finish every TCM course and take the capstones seriously. Learn NetExec well.
 - After the exam VPN or an environment reset, he waited 15 minutes before starting. Reset the environment often when something behaves oddly.
 - Try each command 3 times before dropping it. After each success, screenshot and note it, then try the other attacks before going deep on the first one.
-- Boxes he recommends: HTB Sauna (priority), Cicada, EscapeTwo, Support, Timelapse, Return, Administrator, plus TryHackMe Wreath for pivoting.
+- Boxes he recommends: HTB Sauna (priority), Cicada, EscapeTwo, Support, Timelapse, Return, Administrator, plus TryHackMe Wreath for pivoting. Those HTB machines need VIP and Wreath is Premium, so this plan swaps in free alternatives.
 - Report format: separate External and Internal sections, TCM's finding template, evidence screenshots. Debrief deck: intro, contents, attack overview, attacks and impacts, remediation plan.
 
 ## Exam-day principles
@@ -86,117 +90,115 @@ One person's account; check anything exam-specific against your own Rules of Eng
 
 # Phase 0: Foundations (Nov 22 – Jan 31)
 
-6 hours each day, clock 4:30–11:00 pm (including a 30-minute break). Take passive notes during every Learn block.
+6 hours each day, clock 4:30–11:00 pm (including a 30-minute break). Take passive notes during every Learn block. Every room below is on a community list of free TryHackMe rooms, so none should hit a paywall; if one does, skip it, do the hands-on part in your own lab, and tell Claude so it can be swapped.
 
 ### Sun Nov 22 · Day 1 · Networking refresher
 
-- [ ] Learn (2 h): [Networking Concepts](https://tryhackme.com/room/networkingconcepts) and [Networking Essentials](https://tryhackme.com/room/networkingessentials)
-- [ ] Hands-on (3 h): [Wireshark: The Basics](https://tryhackme.com/room/wiresharkthebasics) and [Tcpdump: The Basics](https://tryhackme.com/room/tcpdump), then capture your own traffic and identify the TCP handshake, DNS, ARP and SMB
+- [ ] Learn (3 h): [Networking Concepts](https://tryhackme.com/room/networkingconcepts), [Introductory Networking](https://tryhackme.com/room/introtonetworking) and [What is Networking?](https://tryhackme.com/room/whatisnetworking)
+- [ ] Hands-on (2 h): install Wireshark on your own machine and capture your own traffic; identify the TCP handshake, DNS, ARP and SMB
 - [ ] Write-up (1 h): create the GitHub repo `pnpt-prep-writeups` with a README, `/templates`, `/writeups` and a sanitization checklist; copy the structure of the TCM sample report
 
 ### Sat Nov 28 · Day 2 · Scanning and enumeration
 
-- [ ] Learn (2 h): [Networking Core Protocols](https://tryhackme.com/room/networkingcoreprotocols) and [Nmap: The Basics](https://tryhackme.com/room/nmap)
+- [ ] Learn (2 h): [Nmap](https://tryhackme.com/room/furthernmap) and [Nmap Live Host Discovery](https://tryhackme.com/room/nmap01)
 - [ ] Hands-on (3 h): [Basic Pentesting](https://tryhackme.com/room/basicpentestingjt): full Nmap, service enumeration, get a user shell; no hints for the first 30 minutes
 - [ ] Write-up (1 h): enumeration findings from Basic Pentesting in TCM format, no flags
 
 ### Sun Nov 29 · Day 3 · Windows basics
 
-- [ ] Learn (2 h): [Windows Fundamentals 1](https://tryhackme.com/room/windowsfundamentals1xbx), [2](https://tryhackme.com/room/windowsfundamentals2x0x) and [3](https://tryhackme.com/room/windowsfundamentals3xzx)
-- [ ] Hands-on (3 h): in a Windows VM, practice whoami /all, net user, net localgroup, systeminfo, ipconfig /all and basic PowerShell navigation
+- [ ] Learn (2 h): Windows Fundamentals [1](https://tryhackme.com/room/windowsfundamentals1xbx), [2](https://tryhackme.com/room/windowsfundamentals2x0x) and [3](https://tryhackme.com/room/windowsfundamentals3xzx)
+- [ ] Hands-on (3 h): [Windows Command Line](https://tryhackme.com/room/windowscommandline) (1 h), then in a Windows VM practice whoami /all, net user, net localgroup, systeminfo and basic PowerShell (2 h)
 - [ ] Write-up (1 h): executive summary, scope and methodology sections for a fictional engagement
 
-### Sat Dec 5 · Day 4 · AD concepts
+### Sat Dec 5 · Day 4 · AD concepts and lab build, part 1
 
-- [ ] Learn (3 h): [Active Directory Basics](https://tryhackme.com/room/winadbasicsrevamp) and [Intro to AD Authentication](https://tryhackme.com/room/introtoactivedirectoryauthentication)
-- [ ] Hands-on (2 h): redraw the AD map from memory (domain, DC, OUs, GPOs, users, groups, trusts); write the Kerberos and NTLM flows on paper; redo the room tasks without hints
-- [ ] Write-up (1 h): AD environment overview section
+- [ ] Learn (2 h): the free [15-hour TCM course on freeCodeCamp](https://www.freecodecamp.org/news/full-penetration-testing-course): the Active Directory overview and lab build sections (use the video chapters)
+- [ ] Hands-on (3 h): start the AD lab: a Windows Server evaluation VM as the domain controller, promote it, create an OU, users and groups
+- [ ] Write-up (1 h): AD environment overview of your lab
 
-### Sun Dec 6 · Day 5 · Your first AD attack
+### Sun Dec 6 · Day 5 · Lab build part 2 and your first AD attack
 
-- [ ] Learn (2 h): [Intro to AD Breaching](https://tryhackme.com/room/introductiontoactivedirectorybreaching)
-- [ ] Hands-on (3 h): [Attacktive Directory](https://tryhackme.com/r/room/attacktivedirectory): Kerbrute user enumeration, AS-REP roasting, SMB shares, secretsdump
+- [ ] Learn (1 h): read how Kerberos and NTLM work at overview level and write both flows in your own words
+- [ ] Hands-on (4 h): finish the lab: join two Windows client VMs and add a service account with an SPN (1 h); then [Attacktive Directory](https://tryhackme.com/room/attacktivedirectory): Kerbrute enumeration, AS-REP roasting, SMB shares, secretsdump (3 h)
 - [ ] Write-up (1 h): AS-REP roasting finding (description, impact, evidence, remediation)
 
-### Sat Dec 12 · Day 6 · AD enumeration
+### Sat Dec 12 · Day 6 · AD initial attack vectors
 
-- [ ] Learn (3 h): [AD: Basic Enumeration](https://tryhackme.com/room/adbasicenumeration) and [AD: Authenticated Enumeration](https://tryhackme.com/room/adauthenticatedenumeration)
-- [ ] Hands-on (2 h): redo Attacktive Directory with no walkthrough
-- [ ] Write-up (1 h): information exposure through domain enumeration finding
+- [ ] Learn (2 h): the same free course, AD initial attack vectors: LLMNR poisoning, SMB relay, IPv6 attacks with mitm6
+- [ ] Hands-on (3 h): run each attack in your lab and crack the captured hashes
+- [ ] Write-up (1 h): LLMNR/NBT-NS poisoning finding
 
-### Sun Dec 13 · Day 7 · Credentials and BloodHound
+### Sun Dec 13 · Day 7 · Post-compromise
 
-- [ ] Learn (2 h): [Intro to Credential Harvesting](https://tryhackme.com/room/introtocredentialharvesting)
-- [ ] Hands-on (3 h): run BloodHound against whichever lab gave you a domain account and find the shortest path to Domain Admin; read the [NetExec docs](https://www.netexec.wiki/) and run the smb and ldap commands from the [cheat sheet](https://github.com/seriotonctf/cme-nxc-cheat-sheet)
-- [ ] Write-up (1 h): credential exposure finding
+- [ ] Learn (2 h): the same course, post-compromise enumeration (ldapdomaindump, BloodHound) and attacks (pass-the-hash, token impersonation, Kerberoasting)
+- [ ] Hands-on (3 h): run each in your lab; use BloodHound to find a path to Domain Admin
+- [ ] Write-up (1 h): Kerberoasting finding
 
-### Sat Dec 19 · Day 8 · Breaching AD
+### Sat Dec 19 · Day 8 · AD rooms
 
-- [ ] Learn (3 h): [Breaching Active Directory](https://tryhackme.com/room/breachingad) (Premium, listed at 120 min), all tasks
-- [ ] Hands-on (2 h): repeat the credential-capture and relay tasks with no hints
-- [ ] Write-up (1 h): LLMNR/NBT-NS poisoning and relay finding
+- [ ] Learn (1 h): the same course, GPP attacks, Mimikatz and the additional AD attacks
+- [ ] Hands-on (4 h): redo Attacktive Directory with no walkthrough (1.5 h), then [VulnNet: Roasted](https://tryhackme.com/room/vulnnetroasted) (2.5 h)
+- [ ] Write-up (1 h): VulnNet: Roasted finding
 
-### Sun Dec 20 · Day 9 · Exploiting AD
+### Sun Dec 20 · Day 9 · Post-exploitation and NTLM
 
-- [ ] Learn (2 h): [Exploiting Active Directory](https://tryhackme.com/room/exploitingad) (Premium, 120 min): permission delegation, Kerberos delegation, automated relays, AD users, GPOs, certificates, domain trusts
-- [ ] Hands-on (3 h): redo the delegation, relay and GPO tasks with no hints
-- [ ] Write-up (1 h): delegation or GPO abuse finding
+- [ ] Learn (1 h): read the [NetExec docs](https://www.netexec.wiki/) and the [cheat sheet](https://github.com/seriotonctf/cme-nxc-cheat-sheet)
+- [ ] Hands-on (4 h): [Post-Exploitation Basics](https://tryhackme.com/room/postexploit) (1 h), then [VulnNet: Active](https://tryhackme.com/room/vulnnetactive) (3 h)
+- [ ] Write-up (1 h): NTLM credential capture finding
 
 ### Sat Dec 26 and Sun Dec 27 · Blocked (California)
 
 No study. Rest.
 
-### Sat Jan 2 · Day 10 · AD lateral movement
+### Sat Jan 2 · Day 10 · AD room: Enterprise
 
-- [ ] Learn (2 h): [Intro to AD Lateral Movement](https://tryhackme.com/room/introductiontoadlateralmovement): PsExec, WinRM, pass-the-hash, SSH tunnels
-- [ ] Hands-on (3 h): repeat each technique with Impacket and then with NetExec
-- [ ] Write-up (1 h): lateral movement via pass-the-hash finding
+- [ ] Learn (1 h): reread your cheat sheet and the NetExec Kerberoasting commands
+- [ ] Hands-on (4 h): [Enterprise](https://tryhackme.com/room/enterprise), first pass; 30 minutes with no hints before any hint
+- [ ] Write-up (1 h): Enterprise in report format, no flags
 
-### Sun Jan 3 · Day 11 · AD challenges
+### Sun Jan 3 · Day 11 · AD room: RazorBlack
 
-- [ ] Learn (2 h): NetExec deep dive: smb, ldap and winrm sections of the [docs](https://www.netexec.wiki/), spraying and Kerberoasting commands in the [cheat sheet](https://github.com/seriotonctf/cme-nxc-cheat-sheet)
-- [ ] Hands-on (3 h): [Proxy challenge](https://tryhackme.com/room/proxychallenge), then [Forward challenge](https://tryhackme.com/room/forwardchallenge)
-- [ ] Write-up (1 h): mini engagement report on the Proxy challenge
+- [ ] Hands-on (5 h): [RazorBlack](https://tryhackme.com/room/raz0rblack), first pass
+- [ ] Write-up (1 h): RazorBlack in report format, no flags
 
-### Sat Jan 9 · Day 12 · Wreath, part 1 (pivoting)
+### Sat Jan 9 · Day 12 · Pivoting, part 1
 
-- [ ] Learn (2 h): [Wreath](https://tryhackme.com/room/wreath) tasks 1–6: access the network, web server enumeration and exploitation. Premium; a 7-day streak also unlocks it per the passer's guide
-- [ ] Hands-on (3 h): Wreath tasks 7–16: pivoting with Proxychains and FoxyProxy, SSH tunnelling, plink, socat, chisel and sshuttle; use every method at least once
-- [ ] Write-up (1 h): pivoting methods, with a network diagram and the commands that worked
+- [ ] Learn (1 h): the READMEs for sshuttle, proxychains and chisel
+- [ ] Hands-on (4 h): [Internal](https://tryhackme.com/room/internal) (hard): enumeration, then reach the internal service through an SSH tunnel
+- [ ] Write-up (1 h): Internal in report format, no flags
 
-### Sun Jan 10 · Day 13 · Wreath, part 2
+### Sun Jan 10 · Day 13 · Pivoting, part 2
 
-- [ ] Learn (1 h): Wreath tasks 17–19: git server enumeration, pivoting and code review
-- [ ] Hands-on (4 h): Wreath tasks 17–21: git server exploitation and stabilization. Tasks 22–38 (C2 and AV evasion) are optional
-- [ ] Write-up (1 h): Wreath as a pentest report
+- [ ] Hands-on (5 h): build a pivot lab: a Linux VM with two network interfaces in front of your AD lab; reach the domain controller through it with sshuttle, then proxychains, then chisel
+- [ ] Write-up (1 h): pivoting methods with a network diagram and the commands that worked
 
 ### Sat Jan 16 · Day 14 · Windows privilege escalation
 
 - [ ] Learn (3 h): TCM [Windows Privilege Escalation for Beginners](https://classcentral.com/classroom/youtube-windows-privilege-escalation-for-beginners-182503)
-- [ ] Hands-on (2 h): [Windows Privilege Escalation](https://tryhackme.com/room/windowsprivesc20)
+- [ ] Hands-on (2 h): [Windows PrivEsc](https://tryhackme.com/room/windows10privesc)
 - [ ] Write-up (1 h): Windows privesc finding (unquoted service path or stored credentials)
 
 ### Sun Jan 17 · Day 15 · Linux privilege escalation
 
-- [ ] Learn (2 h): [Linux Privilege Escalation: Basics](https://tryhackme.com/room/linprivbasics)
-- [ ] Hands-on (3 h): [Linux Privilege Escalation: Enumeration](https://tryhackme.com/room/linprivenum) and [Automation](https://tryhackme.com/room/linprivautomation)
+- [ ] Learn (2 h): [Linux Privilege Escalation](https://tryhackme.com/room/linprivesc)
+- [ ] Hands-on (3 h): [Linux PrivEsc Arena](https://tryhackme.com/room/linuxprivescarena) and [Kenobi](https://tryhackme.com/room/kenobi)
 - [ ] Write-up (1 h): Linux privesc finding (SUID or sudo misconfiguration)
 
 ### Sat Jan 23 · Day 16 · Consolidation, part 1
 
 - [ ] Learn (1 h): reread your cheat sheet; list every command you can't explain
-- [ ] Hands-on (4 h): [Windows Jump](https://tryhackme.com/room/windowsjump) and [Jump](https://tryhackme.com/room/jump) challenges
-- [ ] Write-up (1 h): one challenge in report format
+- [ ] Hands-on (4 h): [Windows PrivEsc Arena](https://tryhackme.com/room/windowsprivescarena) (2 h) and [Relevant](https://tryhackme.com/room/relevant) (2 h)
+- [ ] Write-up (1 h): Relevant in report format
 
 ### Sun Jan 24 · Day 17 · Consolidation, part 2
 
-- [ ] Hands-on (4 h): HTB Sauna (retired, needs VIP), 30 minutes with no hints before any hint. No VIP: redo the Forward challenge instead
-- [ ] Learn (1 h): watch IppSec's Sauna video and read the 0xdf writeup after you finish
-- [ ] Write-up (1 h): Sauna in report format, no passwords
+- [ ] Hands-on (4 h): redo your weakest AD room with no hints
+- [ ] Learn (1 h): read a writeup for any part you missed and update the cheat sheet
+- [ ] Write-up (1 h): the redone room in report format
 
 ### Sat Jan 30 · Day 18 · Self-test
 
-- [ ] Hands-on (4 h): timed run on HTB Timelapse (retired, needs VIP) using only your cheat sheet. No VIP: a THM AD challenge you haven't seen
+- [ ] Hands-on (4 h): reset your AD lab to a clean snapshot and run a timed attack from foothold to domain controller using only your cheat sheet
 - [ ] Learn (1 h): study every gap the run exposed
 - [ ] Write-up (1 h): report on the self-test
 
@@ -204,7 +206,7 @@ No study. Rest.
 
 - [ ] Hands-on (3 h): fix the gaps from the self-test
 - [ ] Admin (1 h): buy the PNPT voucher and training, confirm the exam date, request leave for Apr 12–18
-- [ ] Learn (1 h): install and skim the PEH course outline; plan the Feb 6 start
+- [ ] Learn (1 h): skim the PEH course outline; plan the Feb 6 start
 - [ ] Write-up (1 h): clean up the README index of all write-ups and push to GitHub
 
 ---
@@ -225,10 +227,10 @@ No study. Rest.
 - [ ] Hands-on (4 h): the mid-course capstone; treat it like an engagement and screenshot as you go
 - [ ] Write-up (1 h): capstone as a short report
 
-### Sat Feb 13 · Day 22 · Build your AD lab
+### Sat Feb 13 · Day 22 · Extend your AD lab
 
 - [ ] Learn (2.5 h): PEH Active Directory overview and lab build sections
-- [ ] Hands-on (4 h): build the AD lab: a Windows Server DC and two Windows clients in VMs from evaluation ISOs
+- [ ] Hands-on (4 h): extend your Phase 0 AD lab to match the course lab: a second client, a file share and service accounts with SPNs
 - [ ] Write-up (1 h): lab architecture overview
 
 ### Sun Feb 14 · Day 23 · Initial attack vectors
@@ -287,27 +289,27 @@ Same 8-hour shape as Phase 1.
 - [ ] Learn (1 h): rewatch only the course sections for anything you still fumbled
 - [ ] Write-up (1 h): one redone attack in report format
 
-### Sun Mar 14 · Day 31 · AD box: Cicada
+### Sun Mar 14 · Day 31 · AD room: USTOUN
 
-- [ ] Hands-on (5 h): HTB Cicada, blind (retired, needs VIP)
-- [ ] Learn (1.5 h): IppSec's video and the 0xdf writeup; add every new command to the cheat sheet
-- [ ] Write-up (1 h): Cicada in report format
+- [ ] Hands-on (5 h): [USTOUN](https://tryhackme.com/room/ustoun), blind
+- [ ] Learn (1.5 h): read a writeup for any part you missed; add every new command to the cheat sheet
+- [ ] Write-up (1 h): USTOUN in report format, no flags
 
-### Sat Mar 20 · Day 32 · AD boxes: Support and Return
+### Sat Mar 20 · Day 32 · Second pass: Enterprise
 
-- [ ] Hands-on (5 h): HTB Support, then Return, blind; use NetExec wherever it fits
-- [ ] Learn (1.5 h): IppSec and 0xdf on both
-- [ ] Write-up (1 h): Support in report format
+- [ ] Hands-on (5 h): [Enterprise](https://tryhackme.com/room/enterprise) again, blind, using NetExec wherever it fits
+- [ ] Learn (1.5 h): compare with a writeup; update the cheat sheet
+- [ ] Write-up (1 h): Enterprise attack chain in report format
 
-### Sun Mar 21 · Day 33 · AD box: Administrator
+### Sun Mar 21 · Day 33 · Second pass: RazorBlack
 
-- [ ] Hands-on (5 h): HTB Administrator, blind. EscapeTwo is an optional extra if you finish early
-- [ ] Learn (1.5 h): IppSec and 0xdf; clean up the cheat sheet
-- [ ] Write-up (1 h): Administrator in report format
+- [ ] Hands-on (5 h): [RazorBlack](https://tryhackme.com/room/raz0rblack) again, blind
+- [ ] Learn (1.5 h): compare with a writeup; clean up the cheat sheet
+- [ ] Write-up (1 h): RazorBlack attack chain in report format
 
 ### Sat Mar 27 · Day 34 · Mock engagement 1
 
-Use the best multi-machine AD environment you have access to: a THM AD network you haven't seen, or an AD lab you built.
+Use the best multi-machine AD environment you have access to: your AD lab reset to a clean snapshot with fresh misconfigurations, or GOAD (a free AD lab) if your hardware can run it.
 
 - [ ] External recon and initial access (2.5 h)
 - [ ] Internal enumeration and lateral movement (3 h)
@@ -432,7 +434,7 @@ This final plan merges the original 16-week plan with the dated, weekend-only pl
 | Fit to your schedule | No dates; assumes 2–3 h every day, 7 days a week | Dated, weekend-only, clock times, Dec 26–27 blocked | This plan |
 | TCM course coverage | All five courses, one per week | All five, after a free AD foundation | Tie |
 | AD depth | PEH AD sections, then HTB boxes | THM AD module, PEH AD, 5 AD boxes, NetExec | This plan |
-| Pivoting | sshuttle and proxychains | Wreath covers chisel, plink, socat, sshuttle and more | This plan |
+| Pivoting | sshuttle and proxychains | Free pivot practice: the Internal room plus a pivot lab you build (sshuttle, proxychains, chisel) | This plan |
 | Repetition and gap analysis | Weeks 7–8 and 12 | One gap day plus redo rule | Original |
 | Reporting | Dedicated week, built up in steps | Daily 1-hour write-up, two mock reports, debrief rehearsal | This plan |
 | Mock exam | 5 days on Forest and Sauna | Two multi-machine mocks, 2 days each | This plan |
@@ -445,3 +447,9 @@ This final plan merges the original 16-week plan with the dated, weekend-only pl
 - Forest and Sauna are separate machines, not one connected network, so they don't simulate the exam's external-to-internal chain.
 - The claim that following the plan guarantees a pass is not something any plan can promise.
 - I could not find the two GitHub repos it cites (jayshalwala/AD-PNPT-Study-Guide and peterrakolcza/PNPT-study-guide), nor verify its hour estimates; I left them out.
+
+## Free-only change (Nov 22)
+
+- Premium or VIP items removed: TryHackMe Wreath, Breaching Active Directory, Exploiting Active Directory, Networking Essentials, Wireshark: The Basics, Tcpdump: The Basics, and the HTB retired machines (Sauna, Cicada, Support, Return, Timelapse, Administrator).
+- Replaced with free TryHackMe rooms from a community list, the free TCM videos, and labs you build yourself.
+- That list is community-maintained and may lag behind TryHackMe, so a paywall check on each room is still the final word.
