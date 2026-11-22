@@ -87,9 +87,9 @@ One person's account; check anything exam-specific against your own Rules of Eng
 
 ### Sun Nov 22 · Day 1 · Networking refresher
 
-- [ ] Learn (3 h): [Networking Concepts](https://tryhackme.com/room/networkingconcepts), [Introductory Networking](https://tryhackme.com/room/introtonetworking) and [What is Networking?](https://tryhackme.com/room/whatisnetworking)
-- [ ] Hands-on (2 h): install Wireshark on your own machine and capture your own traffic; identify the TCP handshake, DNS, ARP and SMB
-- [ ] Write-up (1 h): create the GitHub repo `pnpt-prep-writeups` with a README, `/templates`, `/writeups` and a sanitization checklist; copy the structure of the TCM sample report
+- [x] Learn (3 h): [Networking Concepts](https://tryhackme.com/room/networkingconcepts), [Introductory Networking](https://tryhackme.com/room/introtonetworking) and [What is Networking?](https://tryhackme.com/room/whatisnetworking)
+- [x] Hands-on (2 h): install Wireshark on your own machine and capture your own traffic; identify the TCP handshake, DNS, ARP and SMB
+- [x] Write-up (1 h): create the GitHub repo `pnpt-prep-writeups` with a README, `/templates`, `/writeups` and a sanitization checklist; copy the structure of the TCM sample report
 
 ### Sat Nov 28 · Day 2 · Scanning and enumeration
 
