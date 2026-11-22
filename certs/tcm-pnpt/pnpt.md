@@ -13,11 +13,6 @@ Tick each box as you finish it. Every task has a time box and, where one exists,
 
 **Time off:** the exam week is 7 consecutive days (Apr 12–18). Request leave from both jobs by **Feb 1**. Lock the exam date with TCM as soon as you buy the voucher so the deadline is external, not self-set.
 
-## Blocked dates
-
-- **Sat Dec 26 and Sun Dec 27:** California trip, no study.
-- Dec 19–20 stay on. If the trip starts earlier, or the December Japan trip overlaps any other weekend, tell Claude and those days get cut and the plan re-cut.
-
 ## The four phases
 
 | Phase | Dates | Study days | Focus |
